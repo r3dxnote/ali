@@ -316,12 +316,13 @@ async function initApp() {
   try {
     // 1. محاولة جلب البيانات الحية
     try {
+      const liveCacheBust = Date.now();
       const [metaRes, matchesRes, standingsRes, teamsRes, eventsRes] = await Promise.all([
-        fetch('./assets/data/live/meta.json'),
-        fetch('./assets/data/live/matches.json'),
-        fetch('./assets/data/live/standings.json'),
-        fetch('./assets/data/live/teams.json'),
-        fetch('./assets/data/live/events.json')
+        fetch(`./assets/data/live/meta.json?v=${liveCacheBust}`, { cache: 'no-store' }),
+        fetch(`./assets/data/live/matches.json?v=${liveCacheBust}`, { cache: 'no-store' }),
+        fetch(`./assets/data/live/standings.json?v=${liveCacheBust}`, { cache: 'no-store' }),
+        fetch(`./assets/data/live/teams.json?v=${liveCacheBust}`, { cache: 'no-store' }),
+        fetch(`./assets/data/live/events.json?v=${liveCacheBust}`, { cache: 'no-store' })
       ]);
 
       if (metaRes.ok && matchesRes.ok && standingsRes.ok && teamsRes.ok && eventsRes.ok) {

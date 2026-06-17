@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ali-wc-v1e';
+const CACHE_NAME = 'ali-wc-v1f';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -54,6 +54,18 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
   // قصر الكاش على الموارد المحلية فقط وتجاهل الموارد الخارجية
   if (url.origin !== self.location.origin) return;
+
+  // معالجة ملفات البيانات المباشرة بدون كاش أو حفظ في الكاش
+  if (url.pathname.includes('/assets/data/live/')) {
+    event.respondWith(
+      fetch(event.request, { cache: 'no-store' })
+        .catch(() => {
+          // بديل طوارئ من الكاش في حال انقطاع الشبكة بالكامل
+          return caches.match(event.request);
+        })
+    );
+    return;
+  }
 
   event.respondWith(
     fetch(event.request)
