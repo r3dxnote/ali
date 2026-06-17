@@ -1,0 +1,35 @@
+name: API-Football Free Provider Probe
+
+on:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    name: Run API-Football Probe
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run Probe Script
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: |
+          if [ -z "$API_FOOTBALL_KEY" ]; then
+            echo "ERROR: API_FOOTBALL_KEY secret is missing in GitHub repository settings."
+            exit 1
+          fi
+          node scripts/api-football-probe.mjs
+
+      - name: Upload Probe Result Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-football-probe-result
+          path: artifacts/api-football-probe-result.json
+          if-no-files-found: error
