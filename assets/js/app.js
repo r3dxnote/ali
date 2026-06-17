@@ -493,7 +493,7 @@ function enterApp() {
       splash.style.display = 'none';
     }, 600);
   }
-  showToast('أهلاً بك في كورة علي! تم ضبط التوقيت حسب توقيت مكة المكرمة 🇸🇦', 'info');
+  showToast('أهلاً بك في المركاز! تم ضبط التوقيت حسب توقيت مكة المكرمة 🇸🇦', 'info');
 }
 
 // إعداد مستمعي البحث الحي للتبويبات
@@ -860,6 +860,9 @@ function toggleFavorite(matchId, buttonElement) {
   localStorage.setItem('korah_favorites', JSON.stringify(favorites));
 }
 
+// متغير لتخزين معرّف التوقيت لمنع تداخل التنبيهات ونشوب أخطاء بقاء التوست
+let toastTimeout = null;
+
 // إظهار التنبيهات (Toast)
 function showToast(message, type = 'success') {
   const toast = document.getElementById('toast');
@@ -873,9 +876,14 @@ function showToast(message, type = 'success') {
 
   toast.classList.add('show');
   
-  setTimeout(() => {
+  if (toastTimeout) {
+    clearTimeout(toastTimeout);
+  }
+  
+  toastTimeout = setTimeout(() => {
     toast.classList.remove('show');
-  }, 2500);
+    toastTimeout = null;
+  }, 3000); // إخفاء بعد 3 ثوانٍ تلقائياً
 }
 
 // عرض شاشة تفاصيل المنتخب (Bottom Sheet) مع إحصائيات مستوحاة من الترتيب

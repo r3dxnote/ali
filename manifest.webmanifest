@@ -1,7 +1,7 @@
 {
-  "name": "Ali World Cup Match Center",
-  "short_name": "كورة علي",
-  "description": "مركز مباريات كأس العالم 2026 - نسخة تجريبية V1-C PWA",
+  "name": "المركاز - كأس العالم 2026",
+  "short_name": "المركاز",
+  "description": "المركاز - مركز مباريات كأس العالم 2026 - نسخة تجريبية V1-C PWA",
   "lang": "ar",
   "dir": "rtl",
   "start_url": "./",
