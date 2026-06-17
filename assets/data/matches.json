@@ -1,0 +1,105 @@
+{
+  "matches": [
+    {
+      "id": "match-1",
+      "homeTeam": { "name": "الولايات المتحدة", "flag": "🇺🇸", "rank": 11, "isArab": false },
+      "awayTeam": { "name": "المكسيك", "flag": "🇲🇽", "rank": 15, "isArab": false },
+      "time": "20:00",
+      "date": "2026-06-17",
+      "stage": "المجموعة الأولى - الجولة 1",
+      "stadium": "ملعب أزتيكا - مكسيكو سيتي",
+      "scoreHome": 2,
+      "scoreAway": 1,
+      "status": "finished"
+    },
+    {
+      "id": "match-2",
+      "homeTeam": { "name": "السعودية", "flag": "🇸🇦", "rank": 53, "isArab": true },
+      "awayTeam": { "name": "كندا", "flag": "🇨🇦", "rank": 49, "isArab": false },
+      "time": "23:00",
+      "date": "2026-06-17",
+      "stage": "المجموعة الأولى - الجولة 1",
+      "stadium": "ملعب مرسيدس بنز - أتلانتا",
+      "scoreHome": 1,
+      "scoreAway": 1,
+      "status": "live"
+    },
+    {
+      "id": "match-3",
+      "homeTeam": { "name": "مصر", "flag": "🇪🇬", "rank": 30, "isArab": true },
+      "awayTeam": { "name": "الأوروغواي", "flag": "🇺🇾", "rank": 14, "isArab": false },
+      "time": "15:00",
+      "date": "2026-06-17",
+      "stage": "المجموعة الثانية - الجولة 1",
+      "stadium": "ملعب ميتلايف - نيويورك",
+      "scoreHome": 0,
+      "scoreAway": 2,
+      "status": "finished"
+    },
+    {
+      "id": "match-4",
+      "homeTeam": { "name": "إسبانيا", "flag": "🇪🇸", "rank": 8, "isArab": false },
+      "awayTeam": { "name": "المغرب", "flag": "🇲🇦", "rank": 13, "isArab": true },
+      "time": "14:00",
+      "date": "2026-06-18",
+      "stage": "المجموعة الثالثة - الجولة 1",
+      "stadium": "ملعب هارد روك - ميامي",
+      "scoreHome": null,
+      "scoreAway": null,
+      "status": "scheduled"
+    },
+    {
+      "id": "match-5",
+      "homeTeam": { "name": "الأرجنتين", "flag": "🇦🇷", "rank": 1, "isArab": false },
+      "awayTeam": { "name": "فرنسا", "flag": "🇫🇷", "rank": 2, "isArab": false },
+      "time": "17:00",
+      "date": "2026-06-18",
+      "stage": "المجموعة الثانية - الجولة 1",
+      "stadium": "ملعب لوس أنجلوس - كاليفورنيا",
+      "scoreHome": null,
+      "scoreAway": null,
+      "status": "scheduled"
+    },
+    {
+      "id": "match-6",
+      "homeTeam": { "name": "تونس", "flag": "🇹🇳", "rank": 41, "isArab": true },
+      "awayTeam": { "name": "ألمانيا", "flag": "🇩🇪", "rank": 16, "isArab": false },
+      "time": "20:00",
+      "date": "2026-06-19",
+      "stage": "المجموعة الثالثة - الجولة 1",
+      "stadium": "ملعب جيليت - بوسطن",
+      "scoreHome": null,
+      "scoreAway": null,
+      "status": "scheduled"
+    }
+  ],
+  "groups": [
+    {
+      "name": "المجموعة الأولى",
+      "teams": [
+        { "name": "الولايات المتحدة", "flag": "🇺🇸", "points": 3, "played": 1, "won": 1, "drawn": 0, "lost": 0, "goalsFor": 2, "goalsAgainst": 1, "isArab": false },
+        { "name": "السعودية", "flag": "🇸🇦", "points": 1, "played": 1, "won": 0, "drawn": 1, "lost": 0, "goalsFor": 1, "goalsAgainst": 1, "isArab": true },
+        { "name": "كندا", "flag": "🇨🇦", "points": 1, "played": 1, "won": 0, "drawn": 1, "lost": 0, "goalsFor": 1, "goalsAgainst": 1, "isArab": false },
+        { "name": "المكسيك", "flag": "🇲🇽", "points": 0, "played": 1, "won": 0, "drawn": 0, "lost": 1, "goalsFor": 1, "goalsAgainst": 2, "isArab": false }
+      ]
+    },
+    {
+      "name": "المجموعة الثانية",
+      "teams": [
+        { "name": "الأوروغواي", "flag": "🇺🇾", "points": 3, "played": 1, "won": 1, "drawn": 0, "lost": 0, "goalsFor": 2, "goalsAgainst": 0, "isArab": false },
+        { "name": "الأرجنتين", "flag": "🇦🇷", "points": 0, "played": 0, "won": 0, "drawn": 0, "lost": 0, "goalsFor": 0, "goalsAgainst": 0, "isArab": false },
+        { "name": "فرنسا", "flag": "🇫🇷", "points": 0, "played": 0, "won": 0, "drawn": 0, "lost": 0, "goalsFor": 0, "goalsAgainst": 0, "isArab": false },
+        { "name": "مصر", "flag": "🇪🇬", "points": 0, "played": 1, "won": 0, "drawn": 0, "lost": 1, "goalsFor": 0, "goalsAgainst": 2, "isArab": true }
+      ]
+    },
+    {
+      "name": "المجموعة الثالثة",
+      "teams": [
+        { "name": "إسبانيا", "flag": "🇪🇸", "points": 0, "played": 0, "won": 0, "drawn": 0, "lost": 0, "goalsFor": 0, "goalsAgainst": 0, "isArab": false },
+        { "name": "المغرب", "flag": "🇲🇦", "points": 0, "played": 0, "won": 0, "drawn": 0, "lost": 0, "goalsFor": 0, "goalsAgainst": 0, "isArab": true },
+        { "name": "تونس", "flag": "🇹🇳", "points": 0, "played": 0, "won": 0, "drawn": 0, "lost": 0, "goalsFor": 0, "goalsAgainst": 0, "isArab": true },
+        { "name": "ألمانيا", "flag": "🇩🇪", "points": 0, "played": 0, "won": 0, "drawn": 0, "lost": 0, "goalsFor": 0, "goalsAgainst": 0, "isArab": false }
+      ]
+    }
+  ]
+}
