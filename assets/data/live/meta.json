@@ -1,10 +1,11 @@
 {
-  "updatedAt": "2026-06-17T17:54:24.871Z",
+  "updatedAt": "2026-06-17T18:05:47.653Z",
   "provider": "API-Football",
   "leagueId": 1,
   "season": 2026,
   "requestBudgetNote": "Sync queries 4 endpoints by default (teams, standings, fixtures, live). Events queried only for live and latest 3 matches. Max 7 requests per sync run.",
   "generatedBy": "api-football-sync",
+  "groupNormalization": "standings-team-map",
   "counts": {
     "matches": 72,
     "teams": 48,
