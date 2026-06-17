@@ -43,7 +43,98 @@ async function initApp() {
   showLoader(contentArea);
 
   try {
-    // جلب البيانات الوصفية والمباريات بالتوازي باستخدام مسارات نسبية
+    // 1. محاولة جلب البيانات الحية
+    try {
+      const [metaRes, matchesRes, standingsRes, teamsRes, eventsRes] = await Promise.all([
+        fetch('./assets/data/live/meta.json'),
+        fetch('./assets/data/live/matches.json'),
+        fetch('./assets/data/live/standings.json'),
+        fetch('./assets/data/live/teams.json'),
+        fetch('./assets/data/live/events.json')
+      ]);
+
+      if (metaRes.ok && matchesRes.ok && standingsRes.ok && teamsRes.ok && eventsRes.ok) {
+        metaDB = await metaRes.json();
+        const matchesData = await matchesRes.json();
+        const standingsData = await standingsRes.json();
+        const teamsData = await teamsRes.json();
+        const eventsData = await eventsRes.json();
+
+        // حفظ بيانات الفرق والأحداث للاستخدام اللاحق بشكل آمن
+        window.__aliLiveTeams = teamsData;
+        window.__aliLiveEvents = eventsData;
+
+        // تحويل المباريات الحية إلى النموذج البرمجي للواجهة
+        matchesDB = matchesData.map(m => {
+          const isArabHome = ['السعودية', 'مصر', 'المغرب', 'تونس', 'الجزائر', 'قطر', 'الإمارات', 'العراق'].includes(m.homeTeam.name);
+          const isArabAway = ['السعودية', 'مصر', 'المغرب', 'تونس', 'الجزائر', 'قطر', 'الإمارات', 'العراق'].includes(m.awayTeam.name);
+          
+          let status = 'scheduled';
+          if (m.isLive) status = 'live';
+          else if (m.isFinished) status = 'finished';
+
+          let stage = m.group ? m.group : (m.round || 'المجموعات');
+          if (stage.startsWith('Group ')) {
+            stage = stage.replace('Group ', 'المجموعة ');
+          }
+
+          return {
+            id: String(m.id),
+            date: m.dateSaudi || (m.dateUtc ? m.dateUtc.split('T')[0] : ''),
+            time: m.timeSaudi || '00:00',
+            status: status,
+            statusShort: m.statusShort,
+            statusLong: m.statusLong,
+            elapsed: m.elapsed,
+            scoreHome: m.goals?.home ?? null,
+            scoreAway: m.goals?.away ?? null,
+            stage: stage,
+            stadium: m.venueName ? `${m.venueName}، ${m.venueCity || ''}` : 'ملعب المونديال',
+            homeTeam: {
+              name: m.homeTeam.name,
+              flag: m.homeTeam.logo,
+              isArab: isArabHome
+            },
+            awayTeam: {
+              name: m.awayTeam.name,
+              flag: m.awayTeam.logo,
+              isArab: isArabAway
+            }
+          };
+        });
+
+        // تحويل الترتيب الحي إلى النموذج البرمجي للواجهة (مع تصفية المجموعات الحقيقية فقط A-L)
+        const realStandingsGroups = Array.isArray(standingsData.groups)
+          ? standingsData.groups.filter(group => /^Group [A-L]$/.test(group.name))
+          : [];
+
+        groupsDB = realStandingsGroups.map(group => ({
+          name: group.name.startsWith('Group ') ? group.name.replace('Group ', 'المجموعة ') : group.name,
+          teams: group.standings.map(row => ({
+            name: row.teamName,
+            logo: row.teamLogo,
+            flag: row.teamLogo,
+            played: row.allPlayed,
+            won: row.allWin,
+            drawn: row.allDraw,
+            lost: row.allLose,
+            goalsFor: row.goalsFor,
+            goalsAgainst: row.goalsAgainst,
+            points: row.points,
+            isArab: ['السعودية', 'مصر', 'المغرب', 'تونس', 'الجزائر', 'قطر', 'الإمارات', 'العراق'].includes(row.teamName)
+          }))
+        }));
+
+        console.log("Loaded API-Football live data successfully.");
+        updateAppHeader();
+        renderActiveTab();
+        return;
+      }
+    } catch (liveErr) {
+      console.warn("Live JSON fetch failed, falling back to demo data:", liveErr.message);
+    }
+
+    // 2. البديل التلقائي: تحميل البيانات التجريبية
     const [metaRes, matchesRes] = await Promise.all([
       fetch('./assets/data/meta.json'),
       fetch('./assets/data/matches.json')
@@ -58,10 +149,7 @@ async function initApp() {
     matchesDB = data.matches || [];
     groupsDB = data.groups || [];
 
-    // تحديث ترويسة التطبيق والبيانات الوصفية
     updateAppHeader();
-
-    // رندرة البيانات للتبويب النشط
     renderActiveTab();
 
   } catch (error) {
@@ -79,13 +167,27 @@ function updateAppHeader() {
   }
   
   const headerSubtitleEl = document.getElementById('header-subtitle-text');
-  if (headerSubtitleEl && metaDB.description) {
-    headerSubtitleEl.textContent = metaDB.description;
+  if (headerSubtitleEl) {
+    if (metaDB.provider) {
+      headerSubtitleEl.textContent = "جدول المباريات والترتيب المباشر لمونديال 2026";
+    } else if (metaDB.description) {
+      headerSubtitleEl.textContent = metaDB.description;
+    }
   }
 
   const disclaimerTextEl = document.getElementById('disclaimer-text');
   if (disclaimerTextEl && metaDB.disclaimer) {
     disclaimerTextEl.textContent = metaDB.disclaimer;
+  }
+
+  const disclaimerBadge = document.getElementById('disclaimer-badge');
+  if (disclaimerBadge) {
+    if (metaDB.provider && metaDB.updatedAt) {
+      const timeStr = new Date(metaDB.updatedAt).toLocaleTimeString('ar-SA', { hour: '2-digit', minute: '2-digit' });
+      disclaimerBadge.textContent = `مباشر: ${metaDB.provider} (محدث ${timeStr})`;
+    } else if (metaDB.disclaimer) {
+      disclaimerBadge.textContent = metaDB.disclaimer;
+    }
   }
 }
 
@@ -154,7 +256,18 @@ function renderTodayTab() {
   const container = document.getElementById('view-today');
   container.innerHTML = '';
 
-  const targetDate = metaDB.demoToday || '2026-06-17';
+  let targetDate = '2026-06-17';
+  if (metaDB.updatedAt) {
+    const utcMs = new Date(metaDB.updatedAt).getTime();
+    const saudiDateObj = new Date(utcMs + 3 * 3600 * 1000);
+    const yyyy = saudiDateObj.getUTCFullYear();
+    const mm = String(saudiDateObj.getUTCMonth() + 1).padStart(2, '0');
+    const dd = String(saudiDateObj.getUTCDate()).padStart(2, '0');
+    targetDate = `${yyyy}-${mm}-${dd}`;
+  } else if (metaDB.demoToday) {
+    targetDate = metaDB.demoToday;
+  }
+
   const todayMatches = matchesDB.filter(m => m.date === targetDate);
 
   if (todayMatches.length === 0) {
@@ -263,12 +376,16 @@ function renderGroupsTab() {
       const goalsFor = team.goalsFor !== undefined ? team.goalsFor : 0;
       const goalsAgainst = team.goalsAgainst !== undefined ? team.goalsAgainst : 0;
 
+      const teamFlagHTML = (team.flag && team.flag.startsWith('http'))
+        ? `<img src="${team.flag}" style="width: 18px; height: 18px; object-fit: contain; margin-left: 6px;" onerror="this.style.display='none'">`
+        : `<span>${team.flag || ''}</span>`;
+
       tableRows += `
         <tr class="${isArab ? 'highlighted-row' : ''}" onclick="showTeamStats('${team.name}')" style="cursor: pointer;" title="انقر لمشاهدة التفاصيل">
           <td>${idx + 1}</td>
           <td>
             <div class="table-team-name">
-              <span>${team.flag}</span>
+              ${teamFlagHTML}
               <span style="${isArab ? 'color: var(--ksa-text); font-weight: 800;' : ''}">${team.name}</span>
             </div>
           </td>
@@ -327,11 +444,17 @@ function createMatchCard(match) {
   let statusText = 'لم تبدأ';
   let statusClass = 'status-scheduled';
   if (match.status === 'live') {
-    statusText = 'مباشر';
+    statusText = 'مباشرة';
     statusClass = 'status-live';
   } else if (match.status === 'finished') {
     statusText = 'انتهت';
     statusClass = 'status-finished';
+  } else if (match.status === 'scheduled') {
+    statusText = 'قادمة';
+    statusClass = 'status-scheduled';
+  } else {
+    statusText = match.statusLong || match.statusShort || 'قادمة';
+    statusClass = 'status-scheduled';
   }
 
   // النتيجة أو التوقيت
@@ -351,6 +474,14 @@ function createMatchCard(match) {
     `;
   }
 
+  const homeFlagHTML = (match.homeTeam.flag && match.homeTeam.flag.startsWith('http'))
+    ? `<img src="${match.homeTeam.flag}" style="width: 20px; height: 20px; object-fit: contain; margin-left: 8px;" onerror="this.style.display='none'">`
+    : `<span class="team-flag-emoji">${match.homeTeam.flag || ''}</span>`;
+
+  const awayFlagHTML = (match.awayTeam.flag && match.awayTeam.flag.startsWith('http'))
+    ? `<img src="${match.awayTeam.flag}" style="width: 20px; height: 20px; object-fit: contain; margin-left: 8px;" onerror="this.style.display='none'">`
+    : `<span class="team-flag-emoji">${match.awayTeam.flag || ''}</span>`;
+
   card.innerHTML = `
     ${badgeHTML}
     <div class="match-header">
@@ -364,7 +495,7 @@ function createMatchCard(match) {
     <div class="match-teams-row">
       <!-- فريق المستضيف -->
       <div class="team-info" onclick="event.stopPropagation(); showTeamStats('${match.homeTeam.name}')" title="اضغط للتفاصيل">
-        <span class="team-flag-emoji">${match.homeTeam.flag}</span>
+        ${homeFlagHTML}
         <span class="team-name" style="${match.homeTeam.isArab ? 'color: var(--ksa-text); font-weight: 800;' : ''}">${match.homeTeam.name}</span>
       </div>
       
@@ -375,7 +506,7 @@ function createMatchCard(match) {
       
       <!-- فريق الضيف -->
       <div class="team-info" onclick="event.stopPropagation(); showTeamStats('${match.awayTeam.name}')" title="اضغط للتفاصيل">
-        <span class="team-flag-emoji">${match.awayTeam.flag}</span>
+        ${awayFlagHTML}
         <span class="team-name" style="${match.awayTeam.isArab ? 'color: var(--ksa-text); font-weight: 800;' : ''}">${match.awayTeam.name}</span>
       </div>
     </div>
@@ -482,7 +613,15 @@ function showTeamStats(teamName) {
   // تعبئة البيانات في الـ Bottom Sheet
   document.getElementById('sheet-team-name').textContent = teamObj.name;
   document.getElementById('sheet-team-rank').textContent = `تصنيف الفيفا العالمي: #${rank}`;
-  document.getElementById('sheet-flag-container').textContent = teamObj.flag;
+  
+  const flagContainer = document.getElementById('sheet-flag-container');
+  if (flagContainer) {
+    if (teamObj.flag && teamObj.flag.startsWith('http')) {
+      flagContainer.innerHTML = `<img src="${teamObj.flag}" style="width: 42px; height: 42px; object-fit: contain;">`;
+    } else {
+      flagContainer.textContent = teamObj.flag || '';
+    }
+  }
 
   // رندرة شارات الأداء الأخير
   const formContainer = document.getElementById('sheet-form-container');
