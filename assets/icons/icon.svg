@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- الخلفية العنابية المونديالية -->
+  <rect width="512" height="512" rx="15%" fill="#8a1538" />
+  
+  <!-- الدائرة الحدودية الذهبية -->
+  <circle cx="256" cy="256" r="215" fill="none" stroke="#eeae20" stroke-width="12" />
+  
+  <!-- قاعدة الكأس الذهبية -->
+  <rect x="170" y="360" width="172" height="30" rx="6" fill="#eeae20" />
+  
+  <!-- ساق الكأس -->
+  <rect x="236" y="240" width="40" height="120" fill="#eeae20" />
+  
+  <!-- جسم الكأس الرئيسي -->
+  <path d="M 156 160 C 156 260, 356 260, 356 160 Z" fill="#eeae20" />
+  
+  <!-- الحافة العلوية ثلاثية الأبعاد -->
+  <ellipse cx="256" cy="160" rx="100" ry="12" fill="#eeae20" />
+  
+  <!-- مقابض الكأس اليمنى واليسرى -->
+  <path d="M 156 180 C 100 180, 100 280, 156 280" fill="none" stroke="#eeae20" stroke-width="10" stroke-linecap="round" />
+  <path d="M 356 180 C 412 180, 412 280, 356 280" fill="none" stroke="#eeae20" stroke-width="10" stroke-linecap="round" />
+  
+  <!-- النجمة الزخرفية البيضاء في المنتصف -->
+  <polygon points="256,182 260,194 272,194 262,202 266,214 256,206 246,214 250,202 240,194 252,194" fill="#ffffff" />
+</svg>

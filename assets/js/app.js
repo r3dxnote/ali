@@ -9,6 +9,9 @@ let favorites = JSON.parse(localStorage.getItem('korah_favorites')) || [];
 
 // عند تحميل الصفحة بالكامل
 document.addEventListener('DOMContentLoaded', () => {
+  // تسجيل عامل الخدمة (Service Worker) لتأسيس PWA
+  registerServiceWorker();
+
   // مراجعة الـ sessionStorage لكي لا تظهر شاشة الترحيب مجدداً في الجلسة الواحدة
   if (sessionStorage.getItem('splashDismissed')) {
     const splash = document.getElementById('splash');
@@ -18,6 +21,21 @@ document.addEventListener('DOMContentLoaded', () => {
   initApp();
   setupSearchListeners();
 });
+
+// تسجيل عامل الخدمة
+function registerServiceWorker() {
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./service-worker.js')
+        .then((reg) => {
+          console.log('[Service Worker] Registered successfully with scope:', reg.scope);
+        })
+        .catch((err) => {
+          console.warn('[Service Worker] Registration failed:', err);
+        });
+    });
+  }
+}
 
 // تهيئة التطبيق وجلب البيانات
 async function initApp() {
@@ -81,7 +99,7 @@ function enterApp() {
       splash.style.display = 'none';
     }, 600);
   }
-  showToast('أهلاً بك! تم ضبط التوقيت حسب توقيت مكة المكرمة 🇸🇦', 'info');
+  showToast('أهلاً بك في كورة علي! تم ضبط التوقيت حسب توقيت مكة المكرمة 🇸🇦', 'info');
 }
 
 // إعداد مستمعي البحث الحي للتبويبات
