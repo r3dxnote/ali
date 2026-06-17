@@ -4,8 +4,16 @@ compatibility_date = "2024-03-01"
 
 [vars]
 API_FOOTBALL_BASE_URL = "https://v3.football.api-sports.io"
+API_FOOTBALL_LEAGUE_ID = "1"
+API_FOOTBALL_SEASON = "2026"
+LIVE_STALE_SECONDS = "120"
+GENERAL_STALE_SECONDS = "900"
 
-# [vars]
-# API_FOOTBALL_KEY can be defined as an environment variable for local testing,
-# but MUST be set as a Cloudflare secret for production:
+[[kv_namespaces]]
+binding = "ALMERKAZ_SNAPSHOT_KV"
+id = "<YOUR_KV_NAMESPACE_ID_HERE>"
+preview_id = "<YOUR_PREVIEW_KV_NAMESPACE_ID_HERE>"
+
+# Note: The following secrets must be set in Cloudflare dashboard or via Wrangler:
 # wrangler secret put API_FOOTBALL_KEY
+# wrangler secret put SYNC_ADMIN_TOKEN
