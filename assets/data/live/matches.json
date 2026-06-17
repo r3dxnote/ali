@@ -1,0 +1,4034 @@
+[
+  {
+    "id": 1539003,
+    "dateUtc": "2026-06-17T17:00:00+00:00",
+    "dateSaudi": "2026-06-17",
+    "timeSaudi": "20:00",
+    "timestamp": 1781715600,
+    "statusShort": "HT",
+    "statusLong": "Halftime",
+    "elapsed": 45,
+    "round": "Group Stage - 1",
+    "group": "Group Stage - 1",
+    "venueName": "NRG Stadium",
+    "venueCity": "Houston",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 27,
+      "name": "Portugal",
+      "code": "POR",
+      "logo": "https://media.api-sports.io/football/teams/27.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 1508,
+      "name": "Congo DR",
+      "code": "CGO",
+      "logo": "https://media.api-sports.io/football/teams/1508.png",
+      "winner": null
+    },
+    "goals": {
+      "home": 1,
+      "away": 1
+    },
+    "score": {
+      "halftime": {
+        "home": 1,
+        "away": 1
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": true,
+    "isFinished": false,
+    "isScheduled": false
+  },
+  {
+    "id": 1489369,
+    "dateUtc": "2026-06-11T19:00:00+00:00",
+    "dateSaudi": "2026-06-11",
+    "timeSaudi": "22:00",
+    "timestamp": 1781204400,
+    "statusShort": "FT",
+    "statusLong": "Match Finished",
+    "elapsed": 90,
+    "round": "Group Stage - 1",
+    "group": "Group Stage - 1",
+    "venueName": "Estadio Azteca",
+    "venueCity": "Mexico City",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 16,
+      "name": "Mexico",
+      "code": "MEX",
+      "logo": "https://media.api-sports.io/football/teams/16.png",
+      "winner": true
+    },
+    "awayTeam": {
+      "id": 1531,
+      "name": "South Africa",
+      "code": "RSA",
+      "logo": "https://media.api-sports.io/football/teams/1531.png",
+      "winner": false
+    },
+    "goals": {
+      "home": 2,
+      "away": 0
+    },
+    "score": {
+      "halftime": {
+        "home": 1,
+        "away": 0
+      },
+      "fulltime": {
+        "home": 2,
+        "away": 0
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": true,
+    "isScheduled": false
+  },
+  {
+    "id": 1538999,
+    "dateUtc": "2026-06-12T02:00:00+00:00",
+    "dateSaudi": "2026-06-12",
+    "timeSaudi": "05:00",
+    "timestamp": 1781229600,
+    "statusShort": "FT",
+    "statusLong": "Match Finished",
+    "elapsed": 90,
+    "round": "Group Stage - 1",
+    "group": "Group Stage - 1",
+    "venueName": "Estadio Akron",
+    "venueCity": "Guadalajara",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 17,
+      "name": "South Korea",
+      "code": "KOR",
+      "logo": "https://media.api-sports.io/football/teams/17.png",
+      "winner": true
+    },
+    "awayTeam": {
+      "id": 770,
+      "name": "Czechia",
+      "code": "CZE",
+      "logo": "https://media.api-sports.io/football/teams/770.png",
+      "winner": false
+    },
+    "goals": {
+      "home": 2,
+      "away": 1
+    },
+    "score": {
+      "halftime": {
+        "home": 0,
+        "away": 0
+      },
+      "fulltime": {
+        "home": 2,
+        "away": 1
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": true,
+    "isScheduled": false
+  },
+  {
+    "id": 1539000,
+    "dateUtc": "2026-06-12T19:00:00+00:00",
+    "dateSaudi": "2026-06-12",
+    "timeSaudi": "22:00",
+    "timestamp": 1781290800,
+    "statusShort": "FT",
+    "statusLong": "Match Finished",
+    "elapsed": 90,
+    "round": "Group Stage - 1",
+    "group": "Group Stage - 1",
+    "venueName": "BMO Field",
+    "venueCity": "Toronto",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 5529,
+      "name": "Canada",
+      "code": "CAN",
+      "logo": "https://media.api-sports.io/football/teams/5529.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 1113,
+      "name": "Bosnia & Herzegovina",
+      "code": "BIH",
+      "logo": "https://media.api-sports.io/football/teams/1113.png",
+      "winner": null
+    },
+    "goals": {
+      "home": 1,
+      "away": 1
+    },
+    "score": {
+      "halftime": {
+        "home": 0,
+        "away": 1
+      },
+      "fulltime": {
+        "home": 1,
+        "away": 1
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": true,
+    "isScheduled": false
+  },
+  {
+    "id": 1489370,
+    "dateUtc": "2026-06-13T01:00:00+00:00",
+    "dateSaudi": "2026-06-13",
+    "timeSaudi": "04:00",
+    "timestamp": 1781312400,
+    "statusShort": "FT",
+    "statusLong": "Match Finished",
+    "elapsed": 90,
+    "round": "Group Stage - 1",
+    "group": "Group Stage - 1",
+    "venueName": "SoFi Stadium",
+    "venueCity": "Inglewood",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 2384,
+      "name": "USA",
+      "code": "USA",
+      "logo": "https://media.api-sports.io/football/teams/2384.png",
+      "winner": true
+    },
+    "awayTeam": {
+      "id": 2380,
+      "name": "Paraguay",
+      "code": "PAR",
+      "logo": "https://media.api-sports.io/football/teams/2380.png",
+      "winner": false
+    },
+    "goals": {
+      "home": 4,
+      "away": 1
+    },
+    "score": {
+      "halftime": {
+        "home": 3,
+        "away": 0
+      },
+      "fulltime": {
+        "home": 4,
+        "away": 1
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": true,
+    "isScheduled": false
+  },
+  {
+    "id": 1489373,
+    "dateUtc": "2026-06-13T19:00:00+00:00",
+    "dateSaudi": "2026-06-13",
+    "timeSaudi": "22:00",
+    "timestamp": 1781377200,
+    "statusShort": "FT",
+    "statusLong": "Match Finished",
+    "elapsed": 90,
+    "round": "Group Stage - 1",
+    "group": "Group Stage - 1",
+    "venueName": "Levi's Stadium",
+    "venueCity": "Santa Clara",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 1569,
+      "name": "Qatar",
+      "code": "QAT",
+      "logo": "https://media.api-sports.io/football/teams/1569.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 15,
+      "name": "Switzerland",
+      "code": "SUI",
+      "logo": "https://media.api-sports.io/football/teams/15.png",
+      "winner": null
+    },
+    "goals": {
+      "home": 1,
+      "away": 1
+    },
+    "score": {
+      "halftime": {
+        "home": 0,
+        "away": 1
+      },
+      "fulltime": {
+        "home": 1,
+        "away": 1
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": true,
+    "isScheduled": false
+  },
+  {
+    "id": 1489371,
+    "dateUtc": "2026-06-13T22:00:00+00:00",
+    "dateSaudi": "2026-06-14",
+    "timeSaudi": "01:00",
+    "timestamp": 1781388000,
+    "statusShort": "FT",
+    "statusLong": "Match Finished",
+    "elapsed": 90,
+    "round": "Group Stage - 1",
+    "group": "Group Stage - 1",
+    "venueName": "MetLife Stadium",
+    "venueCity": "East Rutherford",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 6,
+      "name": "Brazil",
+      "code": "BRA",
+      "logo": "https://media.api-sports.io/football/teams/6.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 31,
+      "name": "Morocco",
+      "code": "MAR",
+      "logo": "https://media.api-sports.io/football/teams/31.png",
+      "winner": null
+    },
+    "goals": {
+      "home": 1,
+      "away": 1
+    },
+    "score": {
+      "halftime": {
+        "home": 1,
+        "away": 1
+      },
+      "fulltime": {
+        "home": 1,
+        "away": 1
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": true,
+    "isScheduled": false
+  },
+  {
+    "id": 1489372,
+    "dateUtc": "2026-06-14T01:00:00+00:00",
+    "dateSaudi": "2026-06-14",
+    "timeSaudi": "04:00",
+    "timestamp": 1781398800,
+    "statusShort": "FT",
+    "statusLong": "Match Finished",
+    "elapsed": 90,
+    "round": "Group Stage - 1",
+    "group": "Group Stage - 1",
+    "venueName": "Gillette Stadium",
+    "venueCity": "Boston",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 2386,
+      "name": "Haiti",
+      "code": "HAI",
+      "logo": "https://media.api-sports.io/football/teams/2386.png",
+      "winner": false
+    },
+    "awayTeam": {
+      "id": 1108,
+      "name": "Scotland",
+      "code": "SCO",
+      "logo": "https://media.api-sports.io/football/teams/1108.png",
+      "winner": true
+    },
+    "goals": {
+      "home": 0,
+      "away": 1
+    },
+    "score": {
+      "halftime": {
+        "home": 0,
+        "away": 1
+      },
+      "fulltime": {
+        "home": 0,
+        "away": 1
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": true,
+    "isScheduled": false
+  },
+  {
+    "id": 1539001,
+    "dateUtc": "2026-06-14T04:00:00+00:00",
+    "dateSaudi": "2026-06-14",
+    "timeSaudi": "07:00",
+    "timestamp": 1781409600,
+    "statusShort": "FT",
+    "statusLong": "Match Finished",
+    "elapsed": 90,
+    "round": "Group Stage - 1",
+    "group": "Group Stage - 1",
+    "venueName": "BC Place",
+    "venueCity": "Vancouver",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 20,
+      "name": "Australia",
+      "code": "AUS",
+      "logo": "https://media.api-sports.io/football/teams/20.png",
+      "winner": true
+    },
+    "awayTeam": {
+      "id": 777,
+      "name": "Türkiye",
+      "code": "TUR",
+      "logo": "https://media.api-sports.io/football/teams/777.png",
+      "winner": false
+    },
+    "goals": {
+      "home": 2,
+      "away": 0
+    },
+    "score": {
+      "halftime": {
+        "home": 1,
+        "away": 0
+      },
+      "fulltime": {
+        "home": 2,
+        "away": 0
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": true,
+    "isScheduled": false
+  },
+  {
+    "id": 1489374,
+    "dateUtc": "2026-06-14T17:00:00+00:00",
+    "dateSaudi": "2026-06-14",
+    "timeSaudi": "20:00",
+    "timestamp": 1781456400,
+    "statusShort": "FT",
+    "statusLong": "Match Finished",
+    "elapsed": 90,
+    "round": "Group Stage - 1",
+    "group": "Group Stage - 1",
+    "venueName": "NRG Stadium",
+    "venueCity": "Houston",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 25,
+      "name": "Germany",
+      "code": "GER",
+      "logo": "https://media.api-sports.io/football/teams/25.png",
+      "winner": true
+    },
+    "awayTeam": {
+      "id": 5530,
+      "name": "Curaçao",
+      "code": "CUR",
+      "logo": "https://media.api-sports.io/football/teams/5530.png",
+      "winner": false
+    },
+    "goals": {
+      "home": 7,
+      "away": 1
+    },
+    "score": {
+      "halftime": {
+        "home": 3,
+        "away": 1
+      },
+      "fulltime": {
+        "home": 7,
+        "away": 1
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": true,
+    "isScheduled": false
+  },
+  {
+    "id": 1489376,
+    "dateUtc": "2026-06-14T20:00:00+00:00",
+    "dateSaudi": "2026-06-14",
+    "timeSaudi": "23:00",
+    "timestamp": 1781467200,
+    "statusShort": "FT",
+    "statusLong": "Match Finished",
+    "elapsed": 90,
+    "round": "Group Stage - 1",
+    "group": "Group Stage - 1",
+    "venueName": "AT&T Stadium",
+    "venueCity": "Arlington",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 1118,
+      "name": "Netherlands",
+      "code": "NED",
+      "logo": "https://media.api-sports.io/football/teams/1118.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 12,
+      "name": "Japan",
+      "code": "JPN",
+      "logo": "https://media.api-sports.io/football/teams/12.png",
+      "winner": null
+    },
+    "goals": {
+      "home": 2,
+      "away": 2
+    },
+    "score": {
+      "halftime": {
+        "home": 0,
+        "away": 0
+      },
+      "fulltime": {
+        "home": 2,
+        "away": 2
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": true,
+    "isScheduled": false
+  },
+  {
+    "id": 1489375,
+    "dateUtc": "2026-06-14T23:00:00+00:00",
+    "dateSaudi": "2026-06-15",
+    "timeSaudi": "02:00",
+    "timestamp": 1781478000,
+    "statusShort": "FT",
+    "statusLong": "Match Finished",
+    "elapsed": 90,
+    "round": "Group Stage - 1",
+    "group": "Group Stage - 1",
+    "venueName": "Lincoln Financial Field",
+    "venueCity": "Philadelphia",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 1501,
+      "name": "Ivory Coast",
+      "code": "CIV",
+      "logo": "https://media.api-sports.io/football/teams/1501.png",
+      "winner": true
+    },
+    "awayTeam": {
+      "id": 2382,
+      "name": "Ecuador",
+      "code": "ECU",
+      "logo": "https://media.api-sports.io/football/teams/2382.png",
+      "winner": false
+    },
+    "goals": {
+      "home": 1,
+      "away": 0
+    },
+    "score": {
+      "halftime": {
+        "home": 0,
+        "away": 0
+      },
+      "fulltime": {
+        "home": 1,
+        "away": 0
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": true,
+    "isScheduled": false
+  },
+  {
+    "id": 1539002,
+    "dateUtc": "2026-06-15T02:00:00+00:00",
+    "dateSaudi": "2026-06-15",
+    "timeSaudi": "05:00",
+    "timestamp": 1781488800,
+    "statusShort": "FT",
+    "statusLong": "Match Finished",
+    "elapsed": 90,
+    "round": "Group Stage - 1",
+    "group": "Group Stage - 1",
+    "venueName": "Estadio BBVA",
+    "venueCity": "Monterrey",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 5,
+      "name": "Sweden",
+      "code": "SWE",
+      "logo": "https://media.api-sports.io/football/teams/5.png",
+      "winner": true
+    },
+    "awayTeam": {
+      "id": 28,
+      "name": "Tunisia",
+      "code": "TUN",
+      "logo": "https://media.api-sports.io/football/teams/28.png",
+      "winner": false
+    },
+    "goals": {
+      "home": 5,
+      "away": 1
+    },
+    "score": {
+      "halftime": {
+        "home": 2,
+        "away": 1
+      },
+      "fulltime": {
+        "home": 5,
+        "away": 1
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": true,
+    "isScheduled": false
+  },
+  {
+    "id": 1489380,
+    "dateUtc": "2026-06-15T16:00:00+00:00",
+    "dateSaudi": "2026-06-15",
+    "timeSaudi": "19:00",
+    "timestamp": 1781539200,
+    "statusShort": "FT",
+    "statusLong": "Match Finished",
+    "elapsed": 90,
+    "round": "Group Stage - 1",
+    "group": "Group Stage - 1",
+    "venueName": "Mercedes-Benz Stadium",
+    "venueCity": "Atlanta",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 9,
+      "name": "Spain",
+      "code": "ESP",
+      "logo": "https://media.api-sports.io/football/teams/9.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 1533,
+      "name": "Cape Verde Islands",
+      "code": "CPV",
+      "logo": "https://media.api-sports.io/football/teams/1533.png",
+      "winner": null
+    },
+    "goals": {
+      "home": 0,
+      "away": 0
+    },
+    "score": {
+      "halftime": {
+        "home": 0,
+        "away": 0
+      },
+      "fulltime": {
+        "home": 0,
+        "away": 0
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": true,
+    "isScheduled": false
+  },
+  {
+    "id": 1489377,
+    "dateUtc": "2026-06-15T19:00:00+00:00",
+    "dateSaudi": "2026-06-15",
+    "timeSaudi": "22:00",
+    "timestamp": 1781550000,
+    "statusShort": "FT",
+    "statusLong": "Match Finished",
+    "elapsed": 90,
+    "round": "Group Stage - 1",
+    "group": "Group Stage - 1",
+    "venueName": "Lumen Field",
+    "venueCity": "Seattle",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 1,
+      "name": "Belgium",
+      "code": "BEL",
+      "logo": "https://media.api-sports.io/football/teams/1.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 32,
+      "name": "Egypt",
+      "code": "EGY",
+      "logo": "https://media.api-sports.io/football/teams/32.png",
+      "winner": null
+    },
+    "goals": {
+      "home": 1,
+      "away": 1
+    },
+    "score": {
+      "halftime": {
+        "home": 0,
+        "away": 1
+      },
+      "fulltime": {
+        "home": 1,
+        "away": 1
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": true,
+    "isScheduled": false
+  },
+  {
+    "id": 1489379,
+    "dateUtc": "2026-06-15T22:00:00+00:00",
+    "dateSaudi": "2026-06-16",
+    "timeSaudi": "01:00",
+    "timestamp": 1781560800,
+    "statusShort": "FT",
+    "statusLong": "Match Finished",
+    "elapsed": 90,
+    "round": "Group Stage - 1",
+    "group": "Group Stage - 1",
+    "venueName": "Hard Rock Stadium",
+    "venueCity": "Miami Gardens",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 23,
+      "name": "Saudi Arabia",
+      "code": "KSA",
+      "logo": "https://media.api-sports.io/football/teams/23.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 7,
+      "name": "Uruguay",
+      "code": "URU",
+      "logo": "https://media.api-sports.io/football/teams/7.png",
+      "winner": null
+    },
+    "goals": {
+      "home": 1,
+      "away": 1
+    },
+    "score": {
+      "halftime": {
+        "home": 1,
+        "away": 0
+      },
+      "fulltime": {
+        "home": 1,
+        "away": 1
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": true,
+    "isScheduled": false
+  },
+  {
+    "id": 1489378,
+    "dateUtc": "2026-06-16T01:00:00+00:00",
+    "dateSaudi": "2026-06-16",
+    "timeSaudi": "04:00",
+    "timestamp": 1781571600,
+    "statusShort": "FT",
+    "statusLong": "Match Finished",
+    "elapsed": 90,
+    "round": "Group Stage - 1",
+    "group": "Group Stage - 1",
+    "venueName": "SoFi Stadium",
+    "venueCity": "Inglewood",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 22,
+      "name": "Iran",
+      "code": "IRN",
+      "logo": "https://media.api-sports.io/football/teams/22.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 4673,
+      "name": "New Zealand",
+      "code": "NZL",
+      "logo": "https://media.api-sports.io/football/teams/4673.png",
+      "winner": null
+    },
+    "goals": {
+      "home": 2,
+      "away": 2
+    },
+    "score": {
+      "halftime": {
+        "home": 1,
+        "away": 1
+      },
+      "fulltime": {
+        "home": 2,
+        "away": 2
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": true,
+    "isScheduled": false
+  },
+  {
+    "id": 1489383,
+    "dateUtc": "2026-06-16T19:00:00+00:00",
+    "dateSaudi": "2026-06-16",
+    "timeSaudi": "22:00",
+    "timestamp": 1781636400,
+    "statusShort": "FT",
+    "statusLong": "Match Finished",
+    "elapsed": 90,
+    "round": "Group Stage - 1",
+    "group": "Group Stage - 1",
+    "venueName": "MetLife Stadium",
+    "venueCity": "East Rutherford",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 2,
+      "name": "France",
+      "code": "FRA",
+      "logo": "https://media.api-sports.io/football/teams/2.png",
+      "winner": true
+    },
+    "awayTeam": {
+      "id": 13,
+      "name": "Senegal",
+      "code": "SEN",
+      "logo": "https://media.api-sports.io/football/teams/13.png",
+      "winner": false
+    },
+    "goals": {
+      "home": 3,
+      "away": 1
+    },
+    "score": {
+      "halftime": {
+        "home": 0,
+        "away": 0
+      },
+      "fulltime": {
+        "home": 3,
+        "away": 1
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": true,
+    "isScheduled": false
+  },
+  {
+    "id": 1539016,
+    "dateUtc": "2026-06-16T22:00:00+00:00",
+    "dateSaudi": "2026-06-17",
+    "timeSaudi": "01:00",
+    "timestamp": 1781647200,
+    "statusShort": "FT",
+    "statusLong": "Match Finished",
+    "elapsed": 90,
+    "round": "Group Stage - 1",
+    "group": "Group Stage - 1",
+    "venueName": "Gillette Stadium",
+    "venueCity": "Boston",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 1567,
+      "name": "Iraq",
+      "code": "IRQ",
+      "logo": "https://media.api-sports.io/football/teams/1567.png",
+      "winner": false
+    },
+    "awayTeam": {
+      "id": 1090,
+      "name": "Norway",
+      "code": "NOR",
+      "logo": "https://media.api-sports.io/football/teams/1090.png",
+      "winner": true
+    },
+    "goals": {
+      "home": 1,
+      "away": 4
+    },
+    "score": {
+      "halftime": {
+        "home": 1,
+        "away": 2
+      },
+      "fulltime": {
+        "home": 1,
+        "away": 4
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": true,
+    "isScheduled": false
+  },
+  {
+    "id": 1489381,
+    "dateUtc": "2026-06-17T01:00:00+00:00",
+    "dateSaudi": "2026-06-17",
+    "timeSaudi": "04:00",
+    "timestamp": 1781658000,
+    "statusShort": "FT",
+    "statusLong": "Match Finished",
+    "elapsed": 90,
+    "round": "Group Stage - 1",
+    "group": "Group Stage - 1",
+    "venueName": "Arrowhead Stadium",
+    "venueCity": "Kansas City",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 26,
+      "name": "Argentina",
+      "code": "ARG",
+      "logo": "https://media.api-sports.io/football/teams/26.png",
+      "winner": true
+    },
+    "awayTeam": {
+      "id": 1532,
+      "name": "Algeria",
+      "code": "ALG",
+      "logo": "https://media.api-sports.io/football/teams/1532.png",
+      "winner": false
+    },
+    "goals": {
+      "home": 3,
+      "away": 0
+    },
+    "score": {
+      "halftime": {
+        "home": 1,
+        "away": 0
+      },
+      "fulltime": {
+        "home": 3,
+        "away": 0
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": true,
+    "isScheduled": false
+  },
+  {
+    "id": 1489382,
+    "dateUtc": "2026-06-17T04:00:00+00:00",
+    "dateSaudi": "2026-06-17",
+    "timeSaudi": "07:00",
+    "timestamp": 1781668800,
+    "statusShort": "FT",
+    "statusLong": "Match Finished",
+    "elapsed": 90,
+    "round": "Group Stage - 1",
+    "group": "Group Stage - 1",
+    "venueName": "Levi's Stadium",
+    "venueCity": "Santa Clara",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 775,
+      "name": "Austria",
+      "code": "AUT",
+      "logo": "https://media.api-sports.io/football/teams/775.png",
+      "winner": true
+    },
+    "awayTeam": {
+      "id": 1548,
+      "name": "Jordan",
+      "code": "JOR",
+      "logo": "https://media.api-sports.io/football/teams/1548.png",
+      "winner": false
+    },
+    "goals": {
+      "home": 3,
+      "away": 1
+    },
+    "score": {
+      "halftime": {
+        "home": 1,
+        "away": 0
+      },
+      "fulltime": {
+        "home": 3,
+        "away": 1
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": true,
+    "isScheduled": false
+  },
+  {
+    "id": 1489384,
+    "dateUtc": "2026-06-17T20:00:00+00:00",
+    "dateSaudi": "2026-06-17",
+    "timeSaudi": "23:00",
+    "timestamp": 1781726400,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 1",
+    "group": "Group Stage - 1",
+    "venueName": "AT&T Stadium",
+    "venueCity": "Dallas",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 10,
+      "name": "England",
+      "code": "ENG",
+      "logo": "https://media.api-sports.io/football/teams/10.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 3,
+      "name": "Croatia",
+      "code": "CRO",
+      "logo": "https://media.api-sports.io/football/teams/3.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489385,
+    "dateUtc": "2026-06-17T23:00:00+00:00",
+    "dateSaudi": "2026-06-18",
+    "timeSaudi": "02:00",
+    "timestamp": 1781737200,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 1",
+    "group": "Group Stage - 1",
+    "venueName": "BMO Field",
+    "venueCity": "Toronto",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 1504,
+      "name": "Ghana",
+      "code": "GHA",
+      "logo": "https://media.api-sports.io/football/teams/1504.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 11,
+      "name": "Panama",
+      "code": "PAN",
+      "logo": "https://media.api-sports.io/football/teams/11.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489386,
+    "dateUtc": "2026-06-18T02:00:00+00:00",
+    "dateSaudi": "2026-06-18",
+    "timeSaudi": "05:00",
+    "timestamp": 1781748000,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 1",
+    "group": "Group Stage - 1",
+    "venueName": "Estadio Azteca",
+    "venueCity": "Mexico City",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 1568,
+      "name": "Uzbekistan",
+      "code": "UZB",
+      "logo": "https://media.api-sports.io/football/teams/1568.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 8,
+      "name": "Colombia",
+      "code": "COL",
+      "logo": "https://media.api-sports.io/football/teams/8.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1539004,
+    "dateUtc": "2026-06-18T16:00:00+00:00",
+    "dateSaudi": "2026-06-18",
+    "timeSaudi": "19:00",
+    "timestamp": 1781798400,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 2",
+    "group": "Group Stage - 2",
+    "venueName": "Mercedes-Benz Stadium",
+    "venueCity": "Atlanta",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 770,
+      "name": "Czechia",
+      "code": "CZE",
+      "logo": "https://media.api-sports.io/football/teams/770.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 1531,
+      "name": "South Africa",
+      "code": "RSA",
+      "logo": "https://media.api-sports.io/football/teams/1531.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1539005,
+    "dateUtc": "2026-06-18T19:00:00+00:00",
+    "dateSaudi": "2026-06-18",
+    "timeSaudi": "22:00",
+    "timestamp": 1781809200,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 2",
+    "group": "Group Stage - 2",
+    "venueName": "SoFi Stadium",
+    "venueCity": "Los Angeles",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 15,
+      "name": "Switzerland",
+      "code": "SUI",
+      "logo": "https://media.api-sports.io/football/teams/15.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 1113,
+      "name": "Bosnia & Herzegovina",
+      "code": "BIH",
+      "logo": "https://media.api-sports.io/football/teams/1113.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489387,
+    "dateUtc": "2026-06-18T22:00:00+00:00",
+    "dateSaudi": "2026-06-19",
+    "timeSaudi": "01:00",
+    "timestamp": 1781820000,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 2",
+    "group": "Group Stage - 2",
+    "venueName": "BC Place",
+    "venueCity": "Vancouver",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 5529,
+      "name": "Canada",
+      "code": "CAN",
+      "logo": "https://media.api-sports.io/football/teams/5529.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 1569,
+      "name": "Qatar",
+      "code": "QAT",
+      "logo": "https://media.api-sports.io/football/teams/1569.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489388,
+    "dateUtc": "2026-06-19T01:00:00+00:00",
+    "dateSaudi": "2026-06-19",
+    "timeSaudi": "04:00",
+    "timestamp": 1781830800,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 2",
+    "group": "Group Stage - 2",
+    "venueName": "Estadio Akron",
+    "venueCity": "Guadalajara",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 16,
+      "name": "Mexico",
+      "code": "MEX",
+      "logo": "https://media.api-sports.io/football/teams/16.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 17,
+      "name": "South Korea",
+      "code": "KOR",
+      "logo": "https://media.api-sports.io/football/teams/17.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489391,
+    "dateUtc": "2026-06-19T19:00:00+00:00",
+    "dateSaudi": "2026-06-19",
+    "timeSaudi": "22:00",
+    "timestamp": 1781895600,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 2",
+    "group": "Group Stage - 2",
+    "venueName": "Lumen Field",
+    "venueCity": "Seattle",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 2384,
+      "name": "USA",
+      "code": "USA",
+      "logo": "https://media.api-sports.io/football/teams/2384.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 20,
+      "name": "Australia",
+      "code": "AUS",
+      "logo": "https://media.api-sports.io/football/teams/20.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489390,
+    "dateUtc": "2026-06-19T22:00:00+00:00",
+    "dateSaudi": "2026-06-20",
+    "timeSaudi": "01:00",
+    "timestamp": 1781906400,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 2",
+    "group": "Group Stage - 2",
+    "venueName": "Gillette Stadium",
+    "venueCity": "Boston",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 1108,
+      "name": "Scotland",
+      "code": "SCO",
+      "logo": "https://media.api-sports.io/football/teams/1108.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 31,
+      "name": "Morocco",
+      "code": "MAR",
+      "logo": "https://media.api-sports.io/football/teams/31.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489389,
+    "dateUtc": "2026-06-20T00:30:00+00:00",
+    "dateSaudi": "2026-06-20",
+    "timeSaudi": "03:30",
+    "timestamp": 1781915400,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 2",
+    "group": "Group Stage - 2",
+    "venueName": "Lincoln Financial Field",
+    "venueCity": "Philadelphia",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 6,
+      "name": "Brazil",
+      "code": "BRA",
+      "logo": "https://media.api-sports.io/football/teams/6.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 2386,
+      "name": "Haiti",
+      "code": "HAI",
+      "logo": "https://media.api-sports.io/football/teams/2386.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1539006,
+    "dateUtc": "2026-06-20T03:00:00+00:00",
+    "dateSaudi": "2026-06-20",
+    "timeSaudi": "06:00",
+    "timestamp": 1781924400,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 2",
+    "group": "Group Stage - 2",
+    "venueName": "Levi's Stadium",
+    "venueCity": "San Francisco Bay Area",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 777,
+      "name": "Türkiye",
+      "code": "TUR",
+      "logo": "https://media.api-sports.io/football/teams/777.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 2380,
+      "name": "Paraguay",
+      "code": "PAR",
+      "logo": "https://media.api-sports.io/football/teams/2380.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1539007,
+    "dateUtc": "2026-06-20T17:00:00+00:00",
+    "dateSaudi": "2026-06-20",
+    "timeSaudi": "20:00",
+    "timestamp": 1781974800,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 2",
+    "group": "Group Stage - 2",
+    "venueName": "NRG Stadium",
+    "venueCity": "Houston",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 1118,
+      "name": "Netherlands",
+      "code": "NED",
+      "logo": "https://media.api-sports.io/football/teams/1118.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 5,
+      "name": "Sweden",
+      "code": "SWE",
+      "logo": "https://media.api-sports.io/football/teams/5.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489393,
+    "dateUtc": "2026-06-20T20:00:00+00:00",
+    "dateSaudi": "2026-06-20",
+    "timeSaudi": "23:00",
+    "timestamp": 1781985600,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 2",
+    "group": "Group Stage - 2",
+    "venueName": "BMO Field",
+    "venueCity": "Toronto",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 25,
+      "name": "Germany",
+      "code": "GER",
+      "logo": "https://media.api-sports.io/football/teams/25.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 1501,
+      "name": "Ivory Coast",
+      "code": "CIV",
+      "logo": "https://media.api-sports.io/football/teams/1501.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489392,
+    "dateUtc": "2026-06-21T00:00:00+00:00",
+    "dateSaudi": "2026-06-21",
+    "timeSaudi": "03:00",
+    "timestamp": 1782000000,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 2",
+    "group": "Group Stage - 2",
+    "venueName": "Arrowhead Stadium",
+    "venueCity": "Kansas City",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 2382,
+      "name": "Ecuador",
+      "code": "ECU",
+      "logo": "https://media.api-sports.io/football/teams/2382.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 5530,
+      "name": "Curaçao",
+      "code": "CUR",
+      "logo": "https://media.api-sports.io/football/teams/5530.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489394,
+    "dateUtc": "2026-06-21T04:00:00+00:00",
+    "dateSaudi": "2026-06-21",
+    "timeSaudi": "07:00",
+    "timestamp": 1782014400,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 2",
+    "group": "Group Stage - 2",
+    "venueName": "Estadio BBVA",
+    "venueCity": "Monterrey",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 28,
+      "name": "Tunisia",
+      "code": "TUN",
+      "logo": "https://media.api-sports.io/football/teams/28.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 12,
+      "name": "Japan",
+      "code": "JPN",
+      "logo": "https://media.api-sports.io/football/teams/12.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489397,
+    "dateUtc": "2026-06-21T16:00:00+00:00",
+    "dateSaudi": "2026-06-21",
+    "timeSaudi": "19:00",
+    "timestamp": 1782057600,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 2",
+    "group": "Group Stage - 2",
+    "venueName": "Mercedes-Benz Stadium",
+    "venueCity": "Atlanta",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 9,
+      "name": "Spain",
+      "code": "ESP",
+      "logo": "https://media.api-sports.io/football/teams/9.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 23,
+      "name": "Saudi Arabia",
+      "code": "KSA",
+      "logo": "https://media.api-sports.io/football/teams/23.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489395,
+    "dateUtc": "2026-06-21T19:00:00+00:00",
+    "dateSaudi": "2026-06-21",
+    "timeSaudi": "22:00",
+    "timestamp": 1782068400,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 2",
+    "group": "Group Stage - 2",
+    "venueName": "SoFi Stadium",
+    "venueCity": "Los Angeles",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 1,
+      "name": "Belgium",
+      "code": "BEL",
+      "logo": "https://media.api-sports.io/football/teams/1.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 22,
+      "name": "Iran",
+      "code": "IRN",
+      "logo": "https://media.api-sports.io/football/teams/22.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489398,
+    "dateUtc": "2026-06-21T22:00:00+00:00",
+    "dateSaudi": "2026-06-22",
+    "timeSaudi": "01:00",
+    "timestamp": 1782079200,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 2",
+    "group": "Group Stage - 2",
+    "venueName": "Hard Rock Stadium",
+    "venueCity": "Miami",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 7,
+      "name": "Uruguay",
+      "code": "URU",
+      "logo": "https://media.api-sports.io/football/teams/7.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 1533,
+      "name": "Cape Verde Islands",
+      "code": "CPV",
+      "logo": "https://media.api-sports.io/football/teams/1533.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489396,
+    "dateUtc": "2026-06-22T01:00:00+00:00",
+    "dateSaudi": "2026-06-22",
+    "timeSaudi": "04:00",
+    "timestamp": 1782090000,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 2",
+    "group": "Group Stage - 2",
+    "venueName": "BC Place",
+    "venueCity": "Vancouver",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 4673,
+      "name": "New Zealand",
+      "code": "NZL",
+      "logo": "https://media.api-sports.io/football/teams/4673.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 32,
+      "name": "Egypt",
+      "code": "EGY",
+      "logo": "https://media.api-sports.io/football/teams/32.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489399,
+    "dateUtc": "2026-06-22T17:00:00+00:00",
+    "dateSaudi": "2026-06-22",
+    "timeSaudi": "20:00",
+    "timestamp": 1782147600,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 2",
+    "group": "Group Stage - 2",
+    "venueName": "AT&T Stadium",
+    "venueCity": "Dallas",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 26,
+      "name": "Argentina",
+      "code": "ARG",
+      "logo": "https://media.api-sports.io/football/teams/26.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 775,
+      "name": "Austria",
+      "code": "AUT",
+      "logo": "https://media.api-sports.io/football/teams/775.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1539017,
+    "dateUtc": "2026-06-22T21:00:00+00:00",
+    "dateSaudi": "2026-06-23",
+    "timeSaudi": "00:00",
+    "timestamp": 1782162000,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 2",
+    "group": "Group Stage - 2",
+    "venueName": "Lincoln Financial Field",
+    "venueCity": "Philadelphia",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 2,
+      "name": "France",
+      "code": "FRA",
+      "logo": "https://media.api-sports.io/football/teams/2.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 1567,
+      "name": "Iraq",
+      "code": "IRQ",
+      "logo": "https://media.api-sports.io/football/teams/1567.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489401,
+    "dateUtc": "2026-06-23T00:00:00+00:00",
+    "dateSaudi": "2026-06-23",
+    "timeSaudi": "03:00",
+    "timestamp": 1782172800,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 2",
+    "group": "Group Stage - 2",
+    "venueName": "MetLife Stadium",
+    "venueCity": "New York New Jersey",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 1090,
+      "name": "Norway",
+      "code": "NOR",
+      "logo": "https://media.api-sports.io/football/teams/1090.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 13,
+      "name": "Senegal",
+      "code": "SEN",
+      "logo": "https://media.api-sports.io/football/teams/13.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489400,
+    "dateUtc": "2026-06-23T03:00:00+00:00",
+    "dateSaudi": "2026-06-23",
+    "timeSaudi": "06:00",
+    "timestamp": 1782183600,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 2",
+    "group": "Group Stage - 2",
+    "venueName": "Levi's Stadium",
+    "venueCity": "San Francisco Bay Area",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 1548,
+      "name": "Jordan",
+      "code": "JOR",
+      "logo": "https://media.api-sports.io/football/teams/1548.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 1532,
+      "name": "Algeria",
+      "code": "ALG",
+      "logo": "https://media.api-sports.io/football/teams/1532.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489404,
+    "dateUtc": "2026-06-23T17:00:00+00:00",
+    "dateSaudi": "2026-06-23",
+    "timeSaudi": "20:00",
+    "timestamp": 1782234000,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 2",
+    "group": "Group Stage - 2",
+    "venueName": "NRG Stadium",
+    "venueCity": "Houston",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 27,
+      "name": "Portugal",
+      "code": "POR",
+      "logo": "https://media.api-sports.io/football/teams/27.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 1568,
+      "name": "Uzbekistan",
+      "code": "UZB",
+      "logo": "https://media.api-sports.io/football/teams/1568.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489402,
+    "dateUtc": "2026-06-23T20:00:00+00:00",
+    "dateSaudi": "2026-06-23",
+    "timeSaudi": "23:00",
+    "timestamp": 1782244800,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 2",
+    "group": "Group Stage - 2",
+    "venueName": "Gillette Stadium",
+    "venueCity": "Boston",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 10,
+      "name": "England",
+      "code": "ENG",
+      "logo": "https://media.api-sports.io/football/teams/10.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 1504,
+      "name": "Ghana",
+      "code": "GHA",
+      "logo": "https://media.api-sports.io/football/teams/1504.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489403,
+    "dateUtc": "2026-06-23T23:00:00+00:00",
+    "dateSaudi": "2026-06-24",
+    "timeSaudi": "02:00",
+    "timestamp": 1782255600,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 2",
+    "group": "Group Stage - 2",
+    "venueName": "BMO Field",
+    "venueCity": "Toronto",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 11,
+      "name": "Panama",
+      "code": "PAN",
+      "logo": "https://media.api-sports.io/football/teams/11.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 3,
+      "name": "Croatia",
+      "code": "CRO",
+      "logo": "https://media.api-sports.io/football/teams/3.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1539008,
+    "dateUtc": "2026-06-24T02:00:00+00:00",
+    "dateSaudi": "2026-06-24",
+    "timeSaudi": "05:00",
+    "timestamp": 1782266400,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 2",
+    "group": "Group Stage - 2",
+    "venueName": "Estadio Akron",
+    "venueCity": "Guadalajara",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 8,
+      "name": "Colombia",
+      "code": "COL",
+      "logo": "https://media.api-sports.io/football/teams/8.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 1508,
+      "name": "Congo DR",
+      "code": "CGO",
+      "logo": "https://media.api-sports.io/football/teams/1508.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489408,
+    "dateUtc": "2026-06-24T19:00:00+00:00",
+    "dateSaudi": "2026-06-24",
+    "timeSaudi": "22:00",
+    "timestamp": 1782327600,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 3",
+    "group": "Group Stage - 3",
+    "venueName": "BC Place",
+    "venueCity": "Vancouver",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 15,
+      "name": "Switzerland",
+      "code": "SUI",
+      "logo": "https://media.api-sports.io/football/teams/15.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 5529,
+      "name": "Canada",
+      "code": "CAN",
+      "logo": "https://media.api-sports.io/football/teams/5529.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1539009,
+    "dateUtc": "2026-06-24T19:00:00+00:00",
+    "dateSaudi": "2026-06-24",
+    "timeSaudi": "22:00",
+    "timestamp": 1782327600,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 3",
+    "group": "Group Stage - 3",
+    "venueName": "Lumen Field",
+    "venueCity": "Seattle",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 1113,
+      "name": "Bosnia & Herzegovina",
+      "code": "BIH",
+      "logo": "https://media.api-sports.io/football/teams/1113.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 1569,
+      "name": "Qatar",
+      "code": "QAT",
+      "logo": "https://media.api-sports.io/football/teams/1569.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489405,
+    "dateUtc": "2026-06-24T22:00:00+00:00",
+    "dateSaudi": "2026-06-25",
+    "timeSaudi": "01:00",
+    "timestamp": 1782338400,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 3",
+    "group": "Group Stage - 3",
+    "venueName": "Mercedes-Benz Stadium",
+    "venueCity": "Atlanta",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 31,
+      "name": "Morocco",
+      "code": "MAR",
+      "logo": "https://media.api-sports.io/football/teams/31.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 2386,
+      "name": "Haiti",
+      "code": "HAI",
+      "logo": "https://media.api-sports.io/football/teams/2386.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489406,
+    "dateUtc": "2026-06-24T22:00:00+00:00",
+    "dateSaudi": "2026-06-25",
+    "timeSaudi": "01:00",
+    "timestamp": 1782338400,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 3",
+    "group": "Group Stage - 3",
+    "venueName": "Hard Rock Stadium",
+    "venueCity": "Miami",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 1108,
+      "name": "Scotland",
+      "code": "SCO",
+      "logo": "https://media.api-sports.io/football/teams/1108.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 6,
+      "name": "Brazil",
+      "code": "BRA",
+      "logo": "https://media.api-sports.io/football/teams/6.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1539010,
+    "dateUtc": "2026-06-25T01:00:00+00:00",
+    "dateSaudi": "2026-06-25",
+    "timeSaudi": "04:00",
+    "timestamp": 1782349200,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 3",
+    "group": "Group Stage - 3",
+    "venueName": "Estadio Azteca",
+    "venueCity": "Mexico City",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 770,
+      "name": "Czechia",
+      "code": "CZE",
+      "logo": "https://media.api-sports.io/football/teams/770.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 16,
+      "name": "Mexico",
+      "code": "MEX",
+      "logo": "https://media.api-sports.io/football/teams/16.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489407,
+    "dateUtc": "2026-06-25T01:00:00+00:00",
+    "dateSaudi": "2026-06-25",
+    "timeSaudi": "04:00",
+    "timestamp": 1782349200,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 3",
+    "group": "Group Stage - 3",
+    "venueName": "Estadio BBVA",
+    "venueCity": "Monterrey",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 1531,
+      "name": "South Africa",
+      "code": "RSA",
+      "logo": "https://media.api-sports.io/football/teams/1531.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 17,
+      "name": "South Korea",
+      "code": "KOR",
+      "logo": "https://media.api-sports.io/football/teams/17.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489410,
+    "dateUtc": "2026-06-25T20:00:00+00:00",
+    "dateSaudi": "2026-06-25",
+    "timeSaudi": "23:00",
+    "timestamp": 1782417600,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 3",
+    "group": "Group Stage - 3",
+    "venueName": "MetLife Stadium",
+    "venueCity": "New York New Jersey",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 2382,
+      "name": "Ecuador",
+      "code": "ECU",
+      "logo": "https://media.api-sports.io/football/teams/2382.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 25,
+      "name": "Germany",
+      "code": "GER",
+      "logo": "https://media.api-sports.io/football/teams/25.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489409,
+    "dateUtc": "2026-06-25T20:00:00+00:00",
+    "dateSaudi": "2026-06-25",
+    "timeSaudi": "23:00",
+    "timestamp": 1782417600,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 3",
+    "group": "Group Stage - 3",
+    "venueName": "Lincoln Financial Field",
+    "venueCity": "Philadelphia",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 5530,
+      "name": "Curaçao",
+      "code": "CUR",
+      "logo": "https://media.api-sports.io/football/teams/5530.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 1501,
+      "name": "Ivory Coast",
+      "code": "CIV",
+      "logo": "https://media.api-sports.io/football/teams/1501.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1539011,
+    "dateUtc": "2026-06-25T23:00:00+00:00",
+    "dateSaudi": "2026-06-26",
+    "timeSaudi": "02:00",
+    "timestamp": 1782428400,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 3",
+    "group": "Group Stage - 3",
+    "venueName": "AT&T Stadium",
+    "venueCity": "Dallas",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 12,
+      "name": "Japan",
+      "code": "JPN",
+      "logo": "https://media.api-sports.io/football/teams/12.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 5,
+      "name": "Sweden",
+      "code": "SWE",
+      "logo": "https://media.api-sports.io/football/teams/5.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489412,
+    "dateUtc": "2026-06-25T23:00:00+00:00",
+    "dateSaudi": "2026-06-26",
+    "timeSaudi": "02:00",
+    "timestamp": 1782428400,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 3",
+    "group": "Group Stage - 3",
+    "venueName": "Arrowhead Stadium",
+    "venueCity": "Kansas City",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 28,
+      "name": "Tunisia",
+      "code": "TUN",
+      "logo": "https://media.api-sports.io/football/teams/28.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 1118,
+      "name": "Netherlands",
+      "code": "NED",
+      "logo": "https://media.api-sports.io/football/teams/1118.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1539012,
+    "dateUtc": "2026-06-26T02:00:00+00:00",
+    "dateSaudi": "2026-06-26",
+    "timeSaudi": "05:00",
+    "timestamp": 1782439200,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 3",
+    "group": "Group Stage - 3",
+    "venueName": "SoFi Stadium",
+    "venueCity": "Los Angeles",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 777,
+      "name": "Türkiye",
+      "code": "TUR",
+      "logo": "https://media.api-sports.io/football/teams/777.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 2384,
+      "name": "USA",
+      "code": "USA",
+      "logo": "https://media.api-sports.io/football/teams/2384.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489411,
+    "dateUtc": "2026-06-26T02:00:00+00:00",
+    "dateSaudi": "2026-06-26",
+    "timeSaudi": "05:00",
+    "timestamp": 1782439200,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 3",
+    "group": "Group Stage - 3",
+    "venueName": "Levi's Stadium",
+    "venueCity": "San Francisco Bay Area",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 2380,
+      "name": "Paraguay",
+      "code": "PAR",
+      "logo": "https://media.api-sports.io/football/teams/2380.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 20,
+      "name": "Australia",
+      "code": "AUS",
+      "logo": "https://media.api-sports.io/football/teams/20.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1539074,
+    "dateUtc": "2026-06-26T19:00:00+00:00",
+    "dateSaudi": "2026-06-26",
+    "timeSaudi": "22:00",
+    "timestamp": 1782500400,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 3",
+    "group": "Group Stage - 3",
+    "venueName": "BMO Field",
+    "venueCity": "Toronto",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 13,
+      "name": "Senegal",
+      "code": "SEN",
+      "logo": "https://media.api-sports.io/football/teams/13.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 1567,
+      "name": "Iraq",
+      "code": "IRQ",
+      "logo": "https://media.api-sports.io/football/teams/1567.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489416,
+    "dateUtc": "2026-06-26T19:00:00+00:00",
+    "dateSaudi": "2026-06-26",
+    "timeSaudi": "22:00",
+    "timestamp": 1782500400,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 3",
+    "group": "Group Stage - 3",
+    "venueName": "Gillette Stadium",
+    "venueCity": "Boston",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 1090,
+      "name": "Norway",
+      "code": "NOR",
+      "logo": "https://media.api-sports.io/football/teams/1090.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 2,
+      "name": "France",
+      "code": "FRA",
+      "logo": "https://media.api-sports.io/football/teams/2.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489417,
+    "dateUtc": "2026-06-27T00:00:00+00:00",
+    "dateSaudi": "2026-06-27",
+    "timeSaudi": "03:00",
+    "timestamp": 1782518400,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 3",
+    "group": "Group Stage - 3",
+    "venueName": "Estadio Akron",
+    "venueCity": "Guadalajara",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 7,
+      "name": "Uruguay",
+      "code": "URU",
+      "logo": "https://media.api-sports.io/football/teams/7.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 9,
+      "name": "Spain",
+      "code": "ESP",
+      "logo": "https://media.api-sports.io/football/teams/9.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489413,
+    "dateUtc": "2026-06-27T00:00:00+00:00",
+    "dateSaudi": "2026-06-27",
+    "timeSaudi": "03:00",
+    "timestamp": 1782518400,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 3",
+    "group": "Group Stage - 3",
+    "venueName": "NRG Stadium",
+    "venueCity": "Houston",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 1533,
+      "name": "Cape Verde Islands",
+      "code": "CPV",
+      "logo": "https://media.api-sports.io/football/teams/1533.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 23,
+      "name": "Saudi Arabia",
+      "code": "KSA",
+      "logo": "https://media.api-sports.io/football/teams/23.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489414,
+    "dateUtc": "2026-06-27T03:00:00+00:00",
+    "dateSaudi": "2026-06-27",
+    "timeSaudi": "06:00",
+    "timestamp": 1782529200,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 3",
+    "group": "Group Stage - 3",
+    "venueName": "Lumen Field",
+    "venueCity": "Seattle",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 32,
+      "name": "Egypt",
+      "code": "EGY",
+      "logo": "https://media.api-sports.io/football/teams/32.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 22,
+      "name": "Iran",
+      "code": "IRN",
+      "logo": "https://media.api-sports.io/football/teams/22.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489415,
+    "dateUtc": "2026-06-27T03:00:00+00:00",
+    "dateSaudi": "2026-06-27",
+    "timeSaudi": "06:00",
+    "timestamp": 1782529200,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 3",
+    "group": "Group Stage - 3",
+    "venueName": "BC Place",
+    "venueCity": "Vancouver",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 4673,
+      "name": "New Zealand",
+      "code": "NZL",
+      "logo": "https://media.api-sports.io/football/teams/4673.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 1,
+      "name": "Belgium",
+      "code": "BEL",
+      "logo": "https://media.api-sports.io/football/teams/1.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489420,
+    "dateUtc": "2026-06-27T21:00:00+00:00",
+    "dateSaudi": "2026-06-28",
+    "timeSaudi": "00:00",
+    "timestamp": 1782594000,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 3",
+    "group": "Group Stage - 3",
+    "venueName": "Lincoln Financial Field",
+    "venueCity": "Philadelphia",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 3,
+      "name": "Croatia",
+      "code": "CRO",
+      "logo": "https://media.api-sports.io/football/teams/3.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 1504,
+      "name": "Ghana",
+      "code": "GHA",
+      "logo": "https://media.api-sports.io/football/teams/1504.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489422,
+    "dateUtc": "2026-06-27T21:00:00+00:00",
+    "dateSaudi": "2026-06-28",
+    "timeSaudi": "00:00",
+    "timestamp": 1782594000,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 3",
+    "group": "Group Stage - 3",
+    "venueName": "MetLife Stadium",
+    "venueCity": "New York New Jersey",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 11,
+      "name": "Panama",
+      "code": "PAN",
+      "logo": "https://media.api-sports.io/football/teams/11.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 10,
+      "name": "England",
+      "code": "ENG",
+      "logo": "https://media.api-sports.io/football/teams/10.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489419,
+    "dateUtc": "2026-06-27T23:30:00+00:00",
+    "dateSaudi": "2026-06-28",
+    "timeSaudi": "02:30",
+    "timestamp": 1782603000,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 3",
+    "group": "Group Stage - 3",
+    "venueName": "Hard Rock Stadium",
+    "venueCity": "Miami",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 8,
+      "name": "Colombia",
+      "code": "COL",
+      "logo": "https://media.api-sports.io/football/teams/8.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 27,
+      "name": "Portugal",
+      "code": "POR",
+      "logo": "https://media.api-sports.io/football/teams/27.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1539013,
+    "dateUtc": "2026-06-27T23:30:00+00:00",
+    "dateSaudi": "2026-06-28",
+    "timeSaudi": "02:30",
+    "timestamp": 1782603000,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 3",
+    "group": "Group Stage - 3",
+    "venueName": "Mercedes-Benz Stadium",
+    "venueCity": "Atlanta",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 1508,
+      "name": "Congo DR",
+      "code": "CGO",
+      "logo": "https://media.api-sports.io/football/teams/1508.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 1568,
+      "name": "Uzbekistan",
+      "code": "UZB",
+      "logo": "https://media.api-sports.io/football/teams/1568.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489418,
+    "dateUtc": "2026-06-28T02:00:00+00:00",
+    "dateSaudi": "2026-06-28",
+    "timeSaudi": "05:00",
+    "timestamp": 1782612000,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 3",
+    "group": "Group Stage - 3",
+    "venueName": "Arrowhead Stadium",
+    "venueCity": "Kansas City",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 1532,
+      "name": "Algeria",
+      "code": "ALG",
+      "logo": "https://media.api-sports.io/football/teams/1532.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 775,
+      "name": "Austria",
+      "code": "AUT",
+      "logo": "https://media.api-sports.io/football/teams/775.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  },
+  {
+    "id": 1489421,
+    "dateUtc": "2026-06-28T02:00:00+00:00",
+    "dateSaudi": "2026-06-28",
+    "timeSaudi": "05:00",
+    "timestamp": 1782612000,
+    "statusShort": "NS",
+    "statusLong": "Not Started",
+    "elapsed": null,
+    "round": "Group Stage - 3",
+    "group": "Group Stage - 3",
+    "venueName": "AT&T Stadium",
+    "venueCity": "Dallas",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 1548,
+      "name": "Jordan",
+      "code": "JOR",
+      "logo": "https://media.api-sports.io/football/teams/1548.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 26,
+      "name": "Argentina",
+      "code": "ARG",
+      "logo": "https://media.api-sports.io/football/teams/26.png",
+      "winner": null
+    },
+    "goals": {
+      "home": null,
+      "away": null
+    },
+    "score": {
+      "halftime": {
+        "home": null,
+        "away": null
+      },
+      "fulltime": {
+        "home": null,
+        "away": null
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": false,
+    "isScheduled": true
+  }
+]

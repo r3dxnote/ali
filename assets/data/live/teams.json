@@ -1,0 +1,434 @@
+[
+  {
+    "id": 1,
+    "name": "Belgium",
+    "code": "BEL",
+    "country": "Belgium",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/1.png",
+    "venueName": "King Baudouin Stadium"
+  },
+  {
+    "id": 2,
+    "name": "France",
+    "code": "FRA",
+    "country": "France",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/2.png",
+    "venueName": "Groupama Stadium"
+  },
+  {
+    "id": 3,
+    "name": "Croatia",
+    "code": "CRO",
+    "country": "Croatia",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/3.png",
+    "venueName": "Stadion Maksimir"
+  },
+  {
+    "id": 5,
+    "name": "Sweden",
+    "code": "SWE",
+    "country": "Sweden",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/5.png",
+    "venueName": "Strawberry Arena"
+  },
+  {
+    "id": 6,
+    "name": "Brazil",
+    "code": "BRA",
+    "country": "Brazil",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/6.png",
+    "venueName": "Maracanã"
+  },
+  {
+    "id": 7,
+    "name": "Uruguay",
+    "code": "URU",
+    "country": "Uruguay",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/7.png",
+    "venueName": "Estadio Centenario"
+  },
+  {
+    "id": 8,
+    "name": "Colombia",
+    "code": "COL",
+    "country": "Colombia",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/8.png",
+    "venueName": "Estadio Metropolitano Roberto Meléndez"
+  },
+  {
+    "id": 9,
+    "name": "Spain",
+    "code": "ESP",
+    "country": "Spain",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/9.png",
+    "venueName": "Santiago Bernabéu"
+  },
+  {
+    "id": 10,
+    "name": "England",
+    "code": "ENG",
+    "country": "England",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/10.png",
+    "venueName": "Wembley Stadium"
+  },
+  {
+    "id": 11,
+    "name": "Panama",
+    "code": "PAN",
+    "country": "Panama",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/11.png",
+    "venueName": "Estadio Rommel Fernández"
+  },
+  {
+    "id": 12,
+    "name": "Japan",
+    "code": "JPN",
+    "country": "Japan",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/12.png",
+    "venueName": "Saitama Stadium 2002"
+  },
+  {
+    "id": 13,
+    "name": "Senegal",
+    "code": "SEN",
+    "country": "Senegal",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/13.png",
+    "venueName": "Stade Me Abdoulaye Wade"
+  },
+  {
+    "id": 15,
+    "name": "Switzerland",
+    "code": "SUI",
+    "country": "Switzerland",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/15.png",
+    "venueName": "St. Jakob-Park"
+  },
+  {
+    "id": 16,
+    "name": "Mexico",
+    "code": "MEX",
+    "country": "Mexico",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/16.png",
+    "venueName": "Estadio Banorte"
+  },
+  {
+    "id": 17,
+    "name": "South Korea",
+    "code": "KOR",
+    "country": "South-Korea",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/17.png",
+    "venueName": "Seoul World Cup Stadium"
+  },
+  {
+    "id": 20,
+    "name": "Australia",
+    "code": "AUS",
+    "country": "Australia",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/20.png",
+    "venueName": "Accor Stadium"
+  },
+  {
+    "id": 22,
+    "name": "Iran",
+    "code": "IRN",
+    "country": "Iran",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/22.png",
+    "venueName": "Azadi Stadium"
+  },
+  {
+    "id": 23,
+    "name": "Saudi Arabia",
+    "code": "KSA",
+    "country": "Saudi-Arabia",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/23.png",
+    "venueName": "King Fahd Sports City Stadium"
+  },
+  {
+    "id": 25,
+    "name": "Germany",
+    "code": "GER",
+    "country": "Germany",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/25.png",
+    "venueName": "Signal Iduna Park"
+  },
+  {
+    "id": 26,
+    "name": "Argentina",
+    "code": "ARG",
+    "country": "Argentina",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/26.png",
+    "venueName": "Estadio Mâs Monumental"
+  },
+  {
+    "id": 27,
+    "name": "Portugal",
+    "code": "POR",
+    "country": "Portugal",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/27.png",
+    "venueName": "Estádio da Luz"
+  },
+  {
+    "id": 28,
+    "name": "Tunisia",
+    "code": "TUN",
+    "country": "Tunisia",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/28.png",
+    "venueName": "Stade Olympique Hammadi Agrebi"
+  },
+  {
+    "id": 31,
+    "name": "Morocco",
+    "code": "MAR",
+    "country": "Morocco",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/31.png",
+    "venueName": "Stade Mohammed V"
+  },
+  {
+    "id": 32,
+    "name": "Egypt",
+    "code": "EGY",
+    "country": "Egypt",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/32.png",
+    "venueName": "Cairo International Stadium"
+  },
+  {
+    "id": 770,
+    "name": "Czechia",
+    "code": "CZE",
+    "country": "Czech-Republic",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/770.png",
+    "venueName": "Fortuna Arena"
+  },
+  {
+    "id": 775,
+    "name": "Austria",
+    "code": "AUT",
+    "country": "Austria",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/775.png",
+    "venueName": "Ernst-Happel-Stadion"
+  },
+  {
+    "id": 777,
+    "name": "Türkiye",
+    "code": "TUR",
+    "country": "Turkey",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/777.png",
+    "venueName": "Atatürk Olympic Stadium"
+  },
+  {
+    "id": 1090,
+    "name": "Norway",
+    "code": "NOR",
+    "country": "Norway",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/1090.png",
+    "venueName": "Ullevaal Stadion"
+  },
+  {
+    "id": 1108,
+    "name": "Scotland",
+    "code": "SCO",
+    "country": "Scotland",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/1108.png",
+    "venueName": "Hampden Park"
+  },
+  {
+    "id": 1113,
+    "name": "Bosnia & Herzegovina",
+    "code": "BIH",
+    "country": "Bosnia",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/1113.png",
+    "venueName": "Bilino Polje"
+  },
+  {
+    "id": 1118,
+    "name": "Netherlands",
+    "code": "NED",
+    "country": "Netherlands",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/1118.png",
+    "venueName": "Johan Cruijff ArenA"
+  },
+  {
+    "id": 1501,
+    "name": "Ivory Coast",
+    "code": "CIV",
+    "country": "Ivory-Coast",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/1501.png",
+    "venueName": "Alassane Ouattara Stadium"
+  },
+  {
+    "id": 1504,
+    "name": "Ghana",
+    "code": "GHA",
+    "country": "Ghana",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/1504.png",
+    "venueName": "Baba Yara Stadium"
+  },
+  {
+    "id": 1508,
+    "name": "Congo DR",
+    "code": "CGO",
+    "country": "Congo-DR",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/1508.png",
+    "venueName": "Stade des Martyrs"
+  },
+  {
+    "id": 1531,
+    "name": "South Africa",
+    "code": "RSA",
+    "country": "South-Africa",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/1531.png",
+    "venueName": "FNB Stadium"
+  },
+  {
+    "id": 1532,
+    "name": "Algeria",
+    "code": "ALG",
+    "country": "Algeria",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/1532.png",
+    "venueName": "Stade Nelson Mandela"
+  },
+  {
+    "id": 1533,
+    "name": "Cape Verde Islands",
+    "code": "CPV",
+    "country": "Cape-Verde-Islands",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/1533.png",
+    "venueName": "Estádio Nacional de Cabo Verde"
+  },
+  {
+    "id": 1548,
+    "name": "Jordan",
+    "code": "JOR",
+    "country": "Jordan",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/1548.png",
+    "venueName": "Amman International Stadium"
+  },
+  {
+    "id": 1567,
+    "name": "Iraq",
+    "code": "IRQ",
+    "country": "Iraq",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/1567.png",
+    "venueName": "Basra International Stadium"
+  },
+  {
+    "id": 1568,
+    "name": "Uzbekistan",
+    "code": "UZB",
+    "country": "Uzbekistan",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/1568.png",
+    "venueName": "Milliy Stadium"
+  },
+  {
+    "id": 1569,
+    "name": "Qatar",
+    "code": "QAT",
+    "country": "Qatar",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/1569.png",
+    "venueName": "Khalifa International Stadium"
+  },
+  {
+    "id": 2380,
+    "name": "Paraguay",
+    "code": "PAR",
+    "country": "Paraguay",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/2380.png",
+    "venueName": "Estadio Defensores del Chaco"
+  },
+  {
+    "id": 2382,
+    "name": "Ecuador",
+    "code": "ECU",
+    "country": "Ecuador",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/2382.png",
+    "venueName": "Estadio Rodrigo Paz Delgado"
+  },
+  {
+    "id": 2384,
+    "name": "USA",
+    "code": "USA",
+    "country": "USA",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/2384.png",
+    "venueName": "AT&T Stadium"
+  },
+  {
+    "id": 2386,
+    "name": "Haiti",
+    "code": "HAI",
+    "country": "Haiti",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/2386.png",
+    "venueName": "Stade Sylvio Cator"
+  },
+  {
+    "id": 4673,
+    "name": "New Zealand",
+    "code": "NZL",
+    "country": "New-Zealand",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/4673.png",
+    "venueName": "Eden Park"
+  },
+  {
+    "id": 5529,
+    "name": "Canada",
+    "code": "CAN",
+    "country": "Canada",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/5529.png",
+    "venueName": "BMO Field"
+  },
+  {
+    "id": 5530,
+    "name": "Curaçao",
+    "code": "CUR",
+    "country": "Curacao",
+    "national": true,
+    "logo": "https://media.api-sports.io/football/teams/5530.png",
+    "venueName": "Ergilio Hato Stadium"
+  }
+]
