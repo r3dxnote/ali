@@ -234,6 +234,80 @@ function registerServiceWorker() {
   }
 }
 
+// رندرة شريط المباراة المباشرة المميز (Spotlight)
+function renderLiveSpotlight() {
+  const container = document.querySelector('.app-container');
+  const viewContainer = document.querySelector('.view-container');
+  if (!container || !viewContainer) return;
+
+  let spotlightEl = document.getElementById('live-match-spotlight');
+
+  const liveMatches = matchesDB.filter(m => m.status === 'live');
+  if (liveMatches.length === 0) {
+    if (spotlightEl) {
+      spotlightEl.style.display = 'none';
+    }
+    return;
+  }
+
+  // اختيار أول مباراة مباشرة لعرضها
+  const match = liveMatches[0];
+
+  if (!spotlightEl) {
+    spotlightEl = document.createElement('div');
+    spotlightEl.id = 'live-match-spotlight';
+    spotlightEl.className = 'live-spotlight-container';
+    container.insertBefore(spotlightEl, viewContainer);
+  }
+
+  spotlightEl.style.display = 'block';
+
+  const homeArabic = getArabicTeamName(match.homeTeam);
+  const awayArabic = getArabicTeamName(match.awayTeam);
+  
+  const scoreHome = (match.scoreHome !== null && match.scoreHome !== undefined) ? match.scoreHome : '-';
+  const scoreAway = (match.scoreAway !== null && match.scoreAway !== undefined) ? match.scoreAway : '-';
+  
+  const elapsedText = match.elapsed ? `الدقيقة ${match.elapsed}` : 'مباشر';
+  
+  const homeFlagHTML = (match.homeTeam.flag && match.homeTeam.flag.startsWith('http'))
+    ? `<img src="${match.homeTeam.flag}" class="spotlight-flag" onerror="this.style.display='none'">`
+    : `<span class="spotlight-emoji">${match.homeTeam.flag || ''}</span>`;
+
+  const awayFlagHTML = (match.awayTeam.flag && match.awayTeam.flag.startsWith('http'))
+    ? `<img src="${match.awayTeam.flag}" class="spotlight-flag" onerror="this.style.display='none'">`
+    : `<span class="spotlight-emoji">${match.awayTeam.flag || ''}</span>`;
+
+  spotlightEl.innerHTML = `
+    <div class="spotlight-badge-row">
+      <span class="spotlight-live-tag">
+        <span class="spotlight-pulse-dot"></span>
+        مباشرة الآن
+      </span>
+      <span class="spotlight-stage">${match.stage}</span>
+    </div>
+    <div class="spotlight-match-row">
+      <div class="spotlight-team" onclick="event.stopPropagation(); showTeamStats('${match.homeTeam.name}')" title="اضغط للتفاصيل">
+        ${homeFlagHTML}
+        <span class="spotlight-team-name">${homeArabic}</span>
+      </div>
+      <div class="spotlight-score-col">
+        <div class="spotlight-score">
+          <span>${scoreHome}</span>
+          <span class="spotlight-score-dash">-</span>
+          <span>${scoreAway}</span>
+        </div>
+        <div class="spotlight-time">${elapsedText}</div>
+      </div>
+      <div class="spotlight-team" onclick="event.stopPropagation(); showTeamStats('${match.awayTeam.name}')" title="اضغط للتفاصيل">
+        ${awayFlagHTML}
+        <span class="spotlight-team-name">${awayArabic}</span>
+      </div>
+    </div>
+    <div class="spotlight-status-text">المباراة تُلعب حالياً</div>
+  `;
+}
+
 // تهيئة التطبيق وجلب البيانات
 async function initApp() {
   const contentArea = document.getElementById('view-today');
@@ -467,6 +541,7 @@ function renderActiveTab() {
   } else if (activeTab === 'groups') {
     renderGroupsTab();
   }
+  renderLiveSpotlight();
 }
 
 // رندرة تبويب مباريات اليوم

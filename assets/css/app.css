@@ -912,3 +912,150 @@ body {
   font-weight: 600;
   margin-top: 20px;
 }
+
+/* Live Match Spotlight Banner (V1-I) */
+.live-spotlight-container {
+  background: var(--white);
+  border: 1px solid rgba(138, 21, 56, 0.15);
+  border-right: 4px solid var(--primary-color);
+  border-radius: 12px;
+  margin: 16px 16px 8px 16px;
+  padding: 12px 16px;
+  box-shadow: 0 4px 15px rgba(138, 21, 56, 0.05);
+  display: none;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.spotlight-badge-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.spotlight-live-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(220, 38, 38, 0.1);
+  color: #dc2626;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+
+.spotlight-pulse-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #dc2626;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 rgba(220, 38, 38, 0.4);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
+  70% { box-shadow: 0 0 0 6px rgba(220, 38, 38, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+}
+
+.spotlight-stage {
+  font-size: 0.72rem;
+  color: var(--gray-dark);
+  font-weight: 600;
+  background-color: var(--gray-light);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.spotlight-match-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  gap: 8px;
+}
+
+.spotlight-team {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.spotlight-team:hover {
+  background-color: var(--gray-light);
+}
+
+.spotlight-team:active {
+  background-color: var(--gray-med);
+}
+
+.spotlight-flag {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.spotlight-emoji {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.spotlight-team-name {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--text-color);
+}
+
+.spotlight-score-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+}
+
+.spotlight-score {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: 1px;
+}
+
+.spotlight-score-dash {
+  color: var(--gray-med);
+  font-weight: 500;
+}
+
+.spotlight-time {
+  font-size: 0.68rem;
+  color: var(--gray-dark);
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.spotlight-status-text {
+  font-size: 0.68rem;
+  color: var(--gray-dark);
+  text-align: center;
+  border-top: 1px dashed var(--gray-light);
+  padding-top: 6px;
+  margin-top: 4px;
+  font-weight: 600;
+}
