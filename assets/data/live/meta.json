@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-17T18:05:47.653Z",
+  "updatedAt": "2026-06-17T19:40:19.571Z",
   "provider": "API-Football",
   "leagueId": 1,
   "season": 2026,
@@ -10,8 +10,8 @@
     "matches": 72,
     "teams": 48,
     "standingRows": 60,
-    "eventFixtures": 4,
-    "liveMatches": 1
+    "eventFixtures": 3,
+    "liveMatches": 0
   },
   "disclaimer": "Unofficial fan project. Data provided by API-Football/API-SPORTS. Not affiliated with FIFA."
 }

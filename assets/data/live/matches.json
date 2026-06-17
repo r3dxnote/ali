@@ -1,62 +1,5 @@
 [
   {
-    "id": 1539003,
-    "dateUtc": "2026-06-17T17:00:00+00:00",
-    "dateSaudi": "2026-06-17",
-    "timeSaudi": "20:00",
-    "timestamp": 1781715600,
-    "statusShort": "HT",
-    "statusLong": "Halftime",
-    "elapsed": 45,
-    "round": "Group Stage - 1",
-    "group": "Group K",
-    "groupSource": "standings",
-    "venueName": "NRG Stadium",
-    "venueCity": "Houston",
-    "leagueId": 1,
-    "leagueName": "World Cup",
-    "season": 2026,
-    "homeTeam": {
-      "id": 27,
-      "name": "Portugal",
-      "code": "POR",
-      "logo": "https://media.api-sports.io/football/teams/27.png",
-      "winner": null
-    },
-    "awayTeam": {
-      "id": 1508,
-      "name": "Congo DR",
-      "code": "CGO",
-      "logo": "https://media.api-sports.io/football/teams/1508.png",
-      "winner": null
-    },
-    "goals": {
-      "home": 1,
-      "away": 1
-    },
-    "score": {
-      "halftime": {
-        "home": 1,
-        "away": 1
-      },
-      "fulltime": {
-        "home": null,
-        "away": null
-      },
-      "extratime": {
-        "home": null,
-        "away": null
-      },
-      "penalty": {
-        "home": null,
-        "away": null
-      }
-    },
-    "isLive": true,
-    "isFinished": false,
-    "isScheduled": false
-  },
-  {
     "id": 1489369,
     "dateUtc": "2026-06-11T19:00:00+00:00",
     "dateSaudi": "2026-06-11",
@@ -1197,6 +1140,63 @@
     "isScheduled": false
   },
   {
+    "id": 1539003,
+    "dateUtc": "2026-06-17T17:00:00+00:00",
+    "dateSaudi": "2026-06-17",
+    "timeSaudi": "20:00",
+    "timestamp": 1781715600,
+    "statusShort": "FT",
+    "statusLong": "Match Finished",
+    "elapsed": 90,
+    "round": "Group Stage - 1",
+    "group": "Group K",
+    "groupSource": "standings",
+    "venueName": "NRG Stadium",
+    "venueCity": "Houston",
+    "leagueId": 1,
+    "leagueName": "World Cup",
+    "season": 2026,
+    "homeTeam": {
+      "id": 27,
+      "name": "Portugal",
+      "code": "POR",
+      "logo": "https://media.api-sports.io/football/teams/27.png",
+      "winner": null
+    },
+    "awayTeam": {
+      "id": 1508,
+      "name": "Congo DR",
+      "code": "CGO",
+      "logo": "https://media.api-sports.io/football/teams/1508.png",
+      "winner": null
+    },
+    "goals": {
+      "home": 1,
+      "away": 1
+    },
+    "score": {
+      "halftime": {
+        "home": 1,
+        "away": 1
+      },
+      "fulltime": {
+        "home": 1,
+        "away": 1
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    },
+    "isLive": false,
+    "isFinished": true,
+    "isScheduled": false
+  },
+  {
     "id": 1489384,
     "dateUtc": "2026-06-17T20:00:00+00:00",
     "dateSaudi": "2026-06-17",
@@ -1209,7 +1209,7 @@
     "group": "Group L",
     "groupSource": "standings",
     "venueName": "AT&T Stadium",
-    "venueCity": "Dallas",
+    "venueCity": "Arlington",
     "leagueId": 1,
     "leagueName": "World Cup",
     "season": 2026,
