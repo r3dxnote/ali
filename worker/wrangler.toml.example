@@ -1,0 +1,11 @@
+name = "almerkaz-worker"
+main = "src/index.js"
+compatibility_date = "2024-03-01"
+
+[vars]
+API_FOOTBALL_BASE_URL = "https://v3.football.api-sports.io"
+
+# [vars]
+# API_FOOTBALL_KEY can be defined as an environment variable for local testing,
+# but MUST be set as a Cloudflare secret for production:
+# wrangler secret put API_FOOTBALL_KEY
