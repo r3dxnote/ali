@@ -1,3 +1,6 @@
+const APP_BUILD = 'v1k2';
+console.log('المركاز build', APP_BUILD);
+
 // قاموس توطين أسماء المنتخبات المشاركة في كأس العالم إلى اللغة العربية
 const teamTranslations = {
   idMap: {

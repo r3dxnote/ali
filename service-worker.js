@@ -1,10 +1,10 @@
-const CACHE_NAME = 'ali-wc-v1f';
+const CACHE_NAME = 'ali-wc-v1g';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './manifest.webmanifest',
-  './assets/css/app.css',
-  './assets/js/app.js',
+  './assets/css/app.css?v=v1k2',
+  './assets/js/app.js?v=v1k2',
   './assets/data/matches.json',
   './assets/data/meta.json',
   './assets/icons/icon.svg',
@@ -61,7 +61,34 @@ self.addEventListener('fetch', (event) => {
       fetch(event.request, { cache: 'no-store' })
         .catch(() => {
           // بديل طوارئ من الكاش في حال انقطاع الشبكة بالكامل
-          return caches.match(event.request);
+          return caches.match(event.request, { ignoreSearch: true });
+        })
+    );
+    return;
+  }
+
+  // معالجة طلبات التنقل (index.html) كـ Network-first لمنع تجميد واجهة التطبيق القديمة
+  if (event.request.mode === 'navigate') {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          if (response && response.status === 200) {
+            const responseCopy = response.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(event.request, responseCopy);
+            });
+          }
+          return response;
+        })
+        .catch(() => {
+          return caches.match(event.request, { ignoreSearch: true })
+            .then((cachedResponse) => {
+              if (cachedResponse) return cachedResponse;
+              return caches.match('./index.html').then((indexResponse) => {
+                if (indexResponse) return indexResponse;
+                return caches.match('./');
+              });
+            });
         })
     );
     return;
@@ -81,7 +108,7 @@ self.addEventListener('fetch', (event) => {
       })
       .catch(() => {
         // استدعاء من الكاش عند تعذر الاتصال بالشبكة
-        return caches.match(event.request).then((cachedResponse) => {
+        return caches.match(event.request, { ignoreSearch: true }).then((cachedResponse) => {
           if (cachedResponse) {
             return cachedResponse;
           }
