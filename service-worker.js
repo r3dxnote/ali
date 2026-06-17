@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ali-wc-v1d';
+const CACHE_NAME = 'ali-wc-v1e';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',

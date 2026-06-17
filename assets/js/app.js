@@ -476,7 +476,7 @@ function updateAppHeader() {
   if (disclaimerBadge) {
     if (metaDB.provider && metaDB.updatedAt) {
       const timeStr = new Date(metaDB.updatedAt).toLocaleTimeString('ar-SA', { hour: '2-digit', minute: '2-digit' });
-      disclaimerBadge.textContent = `مباشر: ${metaDB.provider} (محدث ${timeStr})`;
+      disclaimerBadge.textContent = `بيانات ${metaDB.provider} • آخر تحديث ${timeStr}`;
     } else if (metaDB.disclaimer) {
       disclaimerBadge.textContent = metaDB.disclaimer;
     }
