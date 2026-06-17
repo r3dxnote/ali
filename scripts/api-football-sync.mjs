@@ -114,6 +114,20 @@ async function main() {
       }
     }
 
+    // Build teamId to groupName Map from standings
+    const teamIdToGroupName = new Map();
+    if (normalizedStandings && Array.isArray(normalizedStandings.groups)) {
+      for (const group of normalizedStandings.groups) {
+        if (/^Group [A-L]$/.test(group.name)) {
+          for (const row of group.standings) {
+            if (row.teamId) {
+              teamIdToGroupName.set(row.teamId, group.name);
+            }
+          }
+        }
+      }
+    }
+
     // 3. Fetch Fixtures
     console.log("Fetching all fixtures...");
     const fixturesData = await fetchFromApi(`/fixtures?league=${leagueId}&season=${season}`);
@@ -181,6 +195,25 @@ async function main() {
       const homeCode = currentTeams?.home?.code || teamCodeMap.get(currentTeams?.home?.id) || null;
       const awayCode = currentTeams?.away?.code || teamCodeMap.get(currentTeams?.away?.id) || null;
 
+      const homeTeamId = currentTeams?.home?.id;
+      const awayTeamId = currentTeams?.away?.id;
+      let matchedGroup = null;
+      let groupSource = null;
+
+      if (homeTeamId && awayTeamId) {
+        const homeGroup = teamIdToGroupName.get(homeTeamId);
+        const awayGroup = teamIdToGroupName.get(awayTeamId);
+        if (homeGroup && awayGroup && homeGroup === awayGroup) {
+          matchedGroup = homeGroup;
+          groupSource = "standings";
+        }
+      }
+
+      if (!matchedGroup) {
+        matchedGroup = (f.league?.round && f.league.round.includes('Group')) ? f.league.round : null;
+        groupSource = matchedGroup ? "fallback" : null;
+      }
+
       return {
         id: currentFix.id,
         dateUtc: currentFix.date,
@@ -191,7 +224,8 @@ async function main() {
         statusLong: currentFix.status?.long || null,
         elapsed: currentFix.status?.elapsed || null,
         round: f.league?.round || null,
-        group: (f.league?.round && f.league.round.includes('Group')) ? f.league.round : null,
+        group: matchedGroup,
+        groupSource: groupSource,
         venueName: currentFix.venue?.name || null,
         venueCity: currentFix.venue?.city || null,
         leagueId: f.league?.id || null,
@@ -289,6 +323,7 @@ async function main() {
       season: parseInt(season),
       requestBudgetNote: "Sync queries 4 endpoints by default (teams, standings, fixtures, live). Events queried only for live and latest 3 matches. Max 7 requests per sync run.",
       generatedBy: "api-football-sync",
+      groupNormalization: "standings-team-map",
       counts: {
         matches: normalizedMatches.length,
         teams: normalizedTeams.length,
