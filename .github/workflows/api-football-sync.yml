@@ -3,7 +3,11 @@ name: API-Football World Cup JSON Sync
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '2-59/5 * * * *'
+
+concurrency:
+  group: api-football-worldcup-sync
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -44,5 +48,6 @@ jobs:
             echo "No changes detected in synced live JSON data."
           else
             git commit -m "Update API-Football live data"
+            git pull --rebase origin main
             git push origin main
           fi
