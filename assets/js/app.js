@@ -1,8 +1,205 @@
+// قاموس توطين أسماء المنتخبات المشاركة في كأس العالم إلى اللغة العربية
+const teamTranslations = {
+  idMap: {
+    1: 'بلجيكا',
+    2: 'فرنسا',
+    3: 'كرواتيا',
+    5: 'السويد',
+    6: 'البرازيل',
+    7: 'الأوروغواي',
+    8: 'كولومبيا',
+    9: 'إسبانيا',
+    10: 'إنجلترا',
+    11: 'بنما',
+    12: 'اليابان',
+    13: 'السنغال',
+    15: 'سويسرا',
+    16: 'المكسيك',
+    17: 'كوريا الجنوبية',
+    20: 'أستراليا',
+    22: 'إيران',
+    23: 'السعودية',
+    25: 'ألمانيا',
+    26: 'الأرجنتين',
+    27: 'البرتغال',
+    28: 'تونس',
+    31: 'المغرب',
+    32: 'مصر',
+    770: 'التشيك',
+    775: 'النمسا',
+    777: 'تركيا',
+    1090: 'النرويج',
+    1108: 'اسكتلندا',
+    1113: 'البوسنة والهرسك',
+    1118: 'هولندا',
+    1501: 'ساحل العاج',
+    1504: 'غانا',
+    1508: 'الكونغو الديمقراطية',
+    1531: 'جنوب أفريقيا',
+    1532: 'الجزائر',
+    1533: 'الرأس الأخضر',
+    1548: 'الأردن',
+    1567: 'العراق',
+    1568: 'أوزبكستان',
+    1569: 'قطر',
+    2380: 'باراغواي',
+    2382: 'الإكوادور',
+    2384: 'الولايات المتحدة',
+    2386: 'هايتي',
+    4673: 'نيوزيلندا',
+    5529: 'كندا',
+    5530: 'كوراساو'
+  },
+  codeMap: {
+    'BEL': 'بلجيكا',
+    'FRA': 'فرنسا',
+    'CRO': 'كرواتيا',
+    'SWE': 'السويد',
+    'BRA': 'البرازيل',
+    'URU': 'الأوروغواي',
+    'COL': 'كولومبيا',
+    'ESP': 'إسبانيا',
+    'ENG': 'إنجلترا',
+    'PAN': 'بنما',
+    'JPN': 'اليابان',
+    'SEN': 'السنغال',
+    'SUI': 'سويسرا',
+    'MEX': 'المكسيك',
+    'KOR': 'كوريا الجنوبية',
+    'AUS': 'أستراليا',
+    'IRN': 'إيران',
+    'KSA': 'السعودية',
+    'GER': 'ألمانيا',
+    'ARG': 'الأرجنتين',
+    'POR': 'البرتغال',
+    'TUN': 'تونس',
+    'MAR': 'المغرب',
+    'EGY': 'مصر',
+    'CZE': 'التشيك',
+    'AUT': 'النمسا',
+    'TUR': 'تركيا',
+    'NOR': 'النرويج',
+    'SCO': 'اسكتلندا',
+    'BIH': 'البوسنة والهرسك',
+    'NED': 'هولندا',
+    'CIV': 'ساحل العاج',
+    'GHA': 'غانا',
+    'CGO': 'الكونغو الديمقراطية',
+    'RSA': 'جنوب أفريقيا',
+    'ALG': 'الجزائر',
+    'CPV': 'الرأس الأخضر',
+    'JOR': 'الأردن',
+    'IRQ': 'العراق',
+    'UZB': 'أوزبكستان',
+    'QAT': 'قطر',
+    'PAR': 'باراغواي',
+    'ECU': 'الإكوادور',
+    'USA': 'الولايات المتحدة',
+    'HAI': 'هايتي',
+    'NZL': 'نيوزيلندا',
+    'CAN': 'كندا',
+    'CUR': 'كوراساو'
+  },
+  nameMap: {
+    'belgium': 'بلجيكا',
+    'france': 'فرنسا',
+    'croatia': 'كرواتيا',
+    'sweden': 'السويد',
+    'brazil': 'البرازيل',
+    'uruguay': 'الأوروغواي',
+    'colombia': 'كولومبيا',
+    'spain': 'إسبانيا',
+    'england': 'إنجلترا',
+    'panama': 'بنما',
+    'japan': 'اليابان',
+    'senegal': 'السنغال',
+    'switzerland': 'سويسرا',
+    'mexico': 'المكسيك',
+    'south korea': 'كوريا الجنوبية',
+    'korea republic': 'كوريا الجنوبية',
+    'rep. korea': 'كوريا الجنوبية',
+    'australia': 'أستراليا',
+    'iran': 'إيران',
+    'ir iran': 'إيران',
+    'saudi arabia': 'السعودية',
+    'germany': 'ألمانيا',
+    'argentina': 'الأرجنتين',
+    'portugal': 'البرتغال',
+    'tunisia': 'تونس',
+    'morocco': 'المغرب',
+    'egypt': 'مصر',
+    'czechia': 'التشيك',
+    'czech republic': 'التشيك',
+    'austria': 'النمسا',
+    'türkiye': 'تركيا',
+    'turkey': 'تركيا',
+    'norway': 'النرويج',
+    'scotland': 'اسكتلندا',
+    'bosnia & herzegovina': 'البوسنة والهرسك',
+    'bosnia and herzegovina': 'البوسنة والهرسك',
+    'netherlands': 'هولندا',
+    'ivory coast': 'ساحل العاج',
+    'côte d\'ivoire': 'ساحل العاج',
+    'cote d\'ivoire': 'ساحل العاج',
+    'ghana': 'غانا',
+    'congo dr': 'الكونغو الديمقراطية',
+    'dr congo': 'الكونغو الديمقراطية',
+    'south africa': 'جنوب أفريقيا',
+    'algeria': 'الجزائر',
+    'cape verde': 'الرأس الأخضر',
+    'cape verde islands': 'الرأس الأخضر',
+    'cabo verde': 'الرأس الأخضر',
+    'jordan': 'الأردن',
+    'iraq': 'العراق',
+    'uzbekistan': 'أوزبكستان',
+    'qatar': 'قطر',
+    'paraguay': 'باراغواي',
+    'ecuador': 'الإكوادور',
+    'usa': 'الولايات المتحدة',
+    'united states': 'الولايات المتحدة',
+    'united states of america': 'الولايات المتحدة',
+    'haiti': 'هايتي',
+    'new zealand': 'نيوزيلندا',
+    'canada': 'كندا',
+    'curaçao': 'كوراساو',
+    'curacao': 'كوراساو'
+  }
+};
+
+function getArabicTeamName(team) {
+  if (!team) return '';
+  
+  // 1. التفضيل الأول: البحث بالمعرف الفريد (id)
+  const id = team.id || team.teamId;
+  if (id !== undefined && id !== null && teamTranslations.idMap[id]) {
+    return teamTranslations.idMap[id];
+  }
+  
+  // 2. البديل الثاني: البحث برمز المنتخب (code)
+  const code = team.code || team.teamCode;
+  if (code && typeof code === 'string' && teamTranslations.codeMap[code.toUpperCase()]) {
+    return teamTranslations.codeMap[code.toUpperCase()];
+  }
+  
+  // 3. البديل الثالث: البحث بالاسم
+  const name = team.name || team.teamName;
+  if (name && typeof name === 'string') {
+    const lowerName = name.trim().toLowerCase();
+    if (teamTranslations.nameMap[lowerName]) {
+      return teamTranslations.nameMap[lowerName];
+    }
+  }
+  
+  // 4. البديل الأخير: الاسم الأصلي الممرر من البيانات
+  return team.name || team.teamName || '';
+}
+
 // متغيرات التطبيق
 let matchesDB = [];
 let groupsDB = [];
 let metaDB = {};
 let activeTab = 'today'; // التبويب الافتراضي النشط
+
 
 // تهيئة المفضلة من LocalStorage
 let favorites = JSON.parse(localStorage.getItem('korah_favorites')) || [];
@@ -66,8 +263,13 @@ async function initApp() {
 
         // تحويل المباريات الحية إلى النموذج البرمجي للواجهة
         matchesDB = matchesData.map(m => {
-          const isArabHome = ['السعودية', 'مصر', 'المغرب', 'تونس', 'الجزائر', 'قطر', 'الإمارات', 'العراق'].includes(m.homeTeam.name);
-          const isArabAway = ['السعودية', 'مصر', 'المغرب', 'تونس', 'الجزائر', 'قطر', 'الإمارات', 'العراق'].includes(m.awayTeam.name);
+          const homeTeamObj = { id: m.homeTeam.id, code: m.homeTeam.code, name: m.homeTeam.name };
+          const awayTeamObj = { id: m.awayTeam.id, code: m.awayTeam.code, name: m.awayTeam.name };
+          const arabicHome = getArabicTeamName(homeTeamObj);
+          const arabicAway = getArabicTeamName(awayTeamObj);
+          
+          const isArabHome = ['السعودية', 'مصر', 'المغرب', 'تونس', 'الجزائر', 'قطر', 'العراق', 'الأردن', 'الإمارات'].includes(arabicHome);
+          const isArabAway = ['السعودية', 'مصر', 'المغرب', 'تونس', 'الجزائر', 'قطر', 'العراق', 'الأردن', 'الإمارات'].includes(arabicAway);
           
           let status = 'scheduled';
           if (m.isLive) status = 'live';
@@ -91,11 +293,15 @@ async function initApp() {
             stage: stage,
             stadium: m.venueName ? `${m.venueName}، ${m.venueCity || ''}` : 'ملعب المونديال',
             homeTeam: {
+              id: m.homeTeam.id,
+              code: m.homeTeam.code,
               name: m.homeTeam.name,
               flag: m.homeTeam.logo,
               isArab: isArabHome
             },
             awayTeam: {
+              id: m.awayTeam.id,
+              code: m.awayTeam.code,
               name: m.awayTeam.name,
               flag: m.awayTeam.logo,
               isArab: isArabAway
@@ -110,19 +316,31 @@ async function initApp() {
 
         groupsDB = realStandingsGroups.map(group => ({
           name: group.name.startsWith('Group ') ? group.name.replace('Group ', 'المجموعة ') : group.name,
-          teams: group.standings.map(row => ({
-            name: row.teamName,
-            logo: row.teamLogo,
-            flag: row.teamLogo,
-            played: row.allPlayed,
-            won: row.allWin,
-            drawn: row.allDraw,
-            lost: row.allLose,
-            goalsFor: row.goalsFor,
-            goalsAgainst: row.goalsAgainst,
-            points: row.points,
-            isArab: ['السعودية', 'مصر', 'المغرب', 'تونس', 'الجزائر', 'قطر', 'الإمارات', 'العراق'].includes(row.teamName)
-          }))
+          teams: group.standings.map(row => {
+            let code = '';
+            if (window.__aliLiveTeams) {
+              const foundTeam = window.__aliLiveTeams.find(t => t.id === row.teamId);
+              if (foundTeam) code = foundTeam.code;
+            }
+            const teamObj = { id: row.teamId, code: code, name: row.teamName };
+            const arabicName = getArabicTeamName(teamObj);
+            const isArab = ['السعودية', 'مصر', 'المغرب', 'تونس', 'الجزائر', 'قطر', 'العراق', 'الأردن', 'الإمارات'].includes(arabicName);
+            return {
+              id: row.teamId,
+              code: code,
+              name: row.teamName,
+              logo: row.teamLogo,
+              flag: row.teamLogo,
+              played: row.allPlayed,
+              won: row.allWin,
+              drawn: row.allDraw,
+              lost: row.allLose,
+              goalsFor: row.goalsFor,
+              goalsAgainst: row.goalsAgainst,
+              points: row.points,
+              isArab: isArab
+            };
+          })
         }));
 
         console.log("Loaded API-Football live data successfully.");
@@ -295,8 +513,12 @@ function renderUpcomingList(query = '') {
     if (!query) return true;
     
     const search = query.toLowerCase();
+    const homeArabic = getArabicTeamName(m.homeTeam).toLowerCase();
+    const awayArabic = getArabicTeamName(m.awayTeam).toLowerCase();
     return m.homeTeam.name.toLowerCase().includes(search) || 
+           homeArabic.includes(search) ||
            m.awayTeam.name.toLowerCase().includes(search) || 
+           awayArabic.includes(search) ||
            m.stage.toLowerCase().includes(search);
   });
 
@@ -328,8 +550,12 @@ function renderResultsList(query = '') {
     if (!query) return true;
     
     const search = query.toLowerCase();
+    const homeArabic = getArabicTeamName(m.homeTeam).toLowerCase();
+    const awayArabic = getArabicTeamName(m.awayTeam).toLowerCase();
     return m.homeTeam.name.toLowerCase().includes(search) || 
+           homeArabic.includes(search) ||
            m.awayTeam.name.toLowerCase().includes(search) || 
+           awayArabic.includes(search) ||
            m.stage.toLowerCase().includes(search);
   });
 
@@ -386,7 +612,7 @@ function renderGroupsTab() {
           <td>
             <div class="table-team-name">
               ${teamFlagHTML}
-              <span style="${isArab ? 'color: var(--ksa-text); font-weight: 800;' : ''}">${team.name}</span>
+              <span style="${isArab ? 'color: var(--ksa-text); font-weight: 800;' : ''}">${getArabicTeamName(team)}</span>
             </div>
           </td>
           <td>${played}</td>
@@ -432,9 +658,12 @@ function createMatchCard(match) {
   
   card.className = `match-card ${isArabMatch ? 'highlighted-match' : ''}`;
   
+  const homeArabicName = getArabicTeamName(match.homeTeam);
+  const awayArabicName = getArabicTeamName(match.awayTeam);
+
   // شارات التمييز للمنتخبات العربية
   let badgeHTML = '';
-  if (match.homeTeam.name === 'السعودية' || match.awayTeam.name === 'السعودية') {
+  if (homeArabicName === 'السعودية' || awayArabicName === 'السعودية') {
     badgeHTML = `<span class="arab-badge">مباراة الأخضر 🇸🇦</span>`;
   } else if (isArabMatch) {
     badgeHTML = `<span class="arab-badge">مواجهة عربية 🌟</span>`;
@@ -496,7 +725,7 @@ function createMatchCard(match) {
       <!-- فريق المستضيف -->
       <div class="team-info" onclick="event.stopPropagation(); showTeamStats('${match.homeTeam.name}')" title="اضغط للتفاصيل">
         ${homeFlagHTML}
-        <span class="team-name" style="${match.homeTeam.isArab ? 'color: var(--ksa-text); font-weight: 800;' : ''}">${match.homeTeam.name}</span>
+        <span class="team-name" style="${match.homeTeam.isArab ? 'color: var(--ksa-text); font-weight: 800;' : ''}">${homeArabicName}</span>
       </div>
       
       <!-- المنتصف والنتيجة -->
@@ -507,7 +736,7 @@ function createMatchCard(match) {
       <!-- فريق الضيف -->
       <div class="team-info" onclick="event.stopPropagation(); showTeamStats('${match.awayTeam.name}')" title="اضغط للتفاصيل">
         ${awayFlagHTML}
-        <span class="team-name" style="${match.awayTeam.isArab ? 'color: var(--ksa-text); font-weight: 800;' : ''}">${match.awayTeam.name}</span>
+        <span class="team-name" style="${match.awayTeam.isArab ? 'color: var(--ksa-text); font-weight: 800;' : ''}">${awayArabicName}</span>
       </div>
     </div>
     
@@ -535,7 +764,7 @@ function toggleFavorite(matchId, buttonElement) {
   
   // البحث عن معلومات المباراة للتوست
   const match = matchesDB.find(m => m.id === matchId);
-  const teamsName = match ? `${match.homeTeam.name} ضد ${match.awayTeam.name}` : '';
+  const teamsName = match ? `${getArabicTeamName(match.homeTeam)} ضد ${getArabicTeamName(match.awayTeam)}` : '';
 
   if (index === -1) {
     favorites.push(matchId);
@@ -579,10 +808,10 @@ function showTeamStats(teamName) {
   // البحث عن بيانات المنتخب في قاعدة البيانات
   let teamObj = null;
   for (let match of matchesDB) {
-    if (match.homeTeam.name === teamName) {
+    if (match.homeTeam.name === teamName || getArabicTeamName(match.homeTeam) === teamName) {
       teamObj = match.homeTeam;
       break;
-    } else if (match.awayTeam.name === teamName) {
+    } else if (match.awayTeam.name === teamName || getArabicTeamName(match.awayTeam) === teamName) {
       teamObj = match.awayTeam;
       break;
     }
@@ -591,7 +820,7 @@ function showTeamStats(teamName) {
   // إذا لم نجدها في المباريات، نبحث في ترتيب المجموعات
   if (!teamObj) {
     for (let group of groupsDB) {
-      const found = group.teams.find(t => t.name === teamName);
+      const found = group.teams.find(t => t.name === teamName || getArabicTeamName(t) === teamName);
       if (found) {
         teamObj = found;
         break;
@@ -611,7 +840,7 @@ function showTeamStats(teamName) {
   else if (rank > 45) mockForm = ['خ', 'ت', 'ف', 'خ', 'ت'];
 
   // تعبئة البيانات في الـ Bottom Sheet
-  document.getElementById('sheet-team-name').textContent = teamObj.name;
+  document.getElementById('sheet-team-name').textContent = getArabicTeamName(teamObj);
   document.getElementById('sheet-team-rank').textContent = `تصنيف الفيفا العالمي: #${rank}`;
   
   const flagContainer = document.getElementById('sheet-flag-container');
