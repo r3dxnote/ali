@@ -1,0 +1,51 @@
+name: API-Football World Cup JSON Sync
+
+on:
+  workflow_dispatch:
+  # schedule:
+  #   # Warning: Running this schedule every 5 minutes (cron: '*/5 * * * *') will consume 288 runs/day.
+  #   # On free plan (100 req/day limit), this will exceed the budget in ~2 hours.
+  #   # Only uncomment and enable this if you are on a paid API-Football subscription plan.
+  #   # - cron: '*/5 * * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    name: Sync API-Football Live Data
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run Sync Script
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: |
+          if [ -z "$API_FOOTBALL_KEY" ]; then
+            echo "ERROR: API_FOOTBALL_KEY secret is missing."
+            exit 1
+          fi
+          node scripts/api-football-sync.mjs
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # Check if assets/data/live has any changes
+          git add assets/data/live/
+          
+          if git diff --cached --quiet; then
+            echo "No changes detected in synced live JSON data."
+          else
+            git commit -m "Update API-Football live data"
+            git push origin main
+          fi
