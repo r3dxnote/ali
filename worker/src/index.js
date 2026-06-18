@@ -65,7 +65,10 @@ function getSaudiDateTime(timestampSec) {
   };
 }
 
-// محرك جلب ومزامنة وتطبيع البيانات من API-Football
+// دالة تأخير التنفيذ (لتجنب تجاوز قيود معدل الطلبات للـ API)
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+// محرك جلب ومزامنة وتطبيع البيانات من API-Football مع تجنب الحدود القصوى
 async function performSync(env) {
   const apiKey = env.API_FOOTBALL_KEY;
   const baseUrl = env.API_FOOTBALL_BASE_URL || "https://v3.football.api-sports.io";
@@ -75,6 +78,8 @@ async function performSync(env) {
   if (!apiKey) {
     throw new Error("API_FOOTBALL_KEY is missing/unconfigured.");
   }
+  
+  const delayMs = parseInt(env.API_FOOTBALL_REQUEST_DELAY_MS) || 1000;
   
   const fetchFromApi = async (endpoint) => {
     const url = `${baseUrl}${endpoint}`;
@@ -86,91 +91,186 @@ async function performSync(env) {
       }
     });
     
+    // التحقق من تجاوز الحد الأقصى عبر رمز الحالة
+    if (response.status === 429) {
+      const err = new Error("API-Football Rate limit exceeded (HTTP 429).");
+      err.isRateLimit = true;
+      throw err;
+    }
+    
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status} for ${endpoint}`);
     }
     
     const json = await response.json();
+    
+    // التحقق من تجاوز الحد الأقصى داخل جسم الاستجابة
     if (json.errors && Object.keys(json.errors).length > 0) {
+      const hasRateLimit = Object.keys(json.errors).some(key => 
+        key.toLowerCase().includes("limit") || 
+        key.toLowerCase().includes("request") ||
+        String(json.errors[key]).toLowerCase().includes("limit") ||
+        String(json.errors[key]).toLowerCase().includes("request")
+      );
+      
+      if (hasRateLimit) {
+        const err = new Error(JSON.stringify(json.errors));
+        err.isRateLimit = true;
+        throw err;
+      }
       throw new Error(`API error: ${JSON.stringify(json.errors)} for ${endpoint}`);
     }
     
     return json;
   };
   
-  // 1. جلب الفرق المشاركة
-  console.log("Worker-Sync: Fetching teams...");
-  const teamsData = await fetchFromApi(`/teams?league=${leagueId}&season=${season}`);
-  const rawTeams = teamsData.response || [];
-  const teamCodeMap = new Map();
-  const teamLogoMap = new Map();
-  
-  const normalizedTeams = rawTeams.map(t => {
-    const team = t.team;
-    const venue = t.venue;
-    if (team) {
-      teamCodeMap.set(team.id, team.code);
-      teamLogoMap.set(team.id, team.logo);
-      return {
-        id: team.id,
-        name: team.name,
-        code: team.code || null,
-        country: team.country || null,
-        national: team.national ?? null,
-        logo: team.logo || null,
-        venueName: venue?.name || null
-      };
+  // تحميل اللقطة السابقة لمراجعة إمكانية إعادة استخدام البيانات الثابتة
+  let existingSnapshot = null;
+  if (env.ALMERKAZ_SNAPSHOT_KV) {
+    try {
+      const raw = await env.ALMERKAZ_SNAPSHOT_KV.get("live:snapshot:v1");
+      if (raw) {
+        existingSnapshot = JSON.parse(raw);
+      }
+    } catch (err) {
+      console.error("Worker-Sync: Error loading existing snapshot for static reuse:", err.message);
     }
-    return null;
-  }).filter(Boolean);
+  }
   
-  // 2. جلب جدول الترتيب وتطبيعه
-  console.log("Worker-Sync: Fetching standings...");
-  const standingsData = await fetchFromApi(`/standings?league=${leagueId}&season=${season}`);
-  const rawStandings = standingsData.response || [];
+  const now = Date.now();
+  const staticRefreshSeconds = parseInt(env.STATIC_REFRESH_SECONDS) || 21600; // 6 ساعات افتراضياً
   
-  let normalizedStandings = {
+  let reuseStatic = false;
+  if (existingSnapshot && existingSnapshot.updatedAt) {
+    const lastUpdateMs = new Date(existingSnapshot.updatedAt).getTime();
+    const elapsedSec = (now - lastUpdateMs) / 1000;
+    if (elapsedSec < staticRefreshSeconds) {
+      reuseStatic = true;
+    }
+  }
+  
+  const metaResult = {
+    updatedAt: new Date().toISOString(),
+    provider: "API-Football",
     leagueId: parseInt(leagueId),
-    leagueName: "FIFA World Cup",
     season: parseInt(season),
-    groups: []
+    requestBudgetNote: "Minimal-first strategy with rate limit safeties. Event calls capped at max 2 live fixtures.",
+    generatedBy: "api-football-sync-worker-hotfix1",
+    groupNormalization: "standings-team-map",
+    partial: false,
+    warnings: [],
+    counts: {}
   };
   
+  // 1. جلب جدول المباريات الكامل (المصدر الأساسي - يجب أن ينجح)
+  console.log("Worker-Sync: Fetching all fixtures...");
+  const fixturesData = await fetchFromApi(`/fixtures?league=${leagueId}&season=${season}`);
+  const rawFixtures = fixturesData.response || [];
+  
+  // 2. جلب المباريات المباشرة النشطة (يجب أن ينجح)
+  await delay(delayMs);
+  console.log("Worker-Sync: Fetching live fixtures feed...");
+  let liveFeed = [];
+  try {
+    const liveData = await fetchFromApi("/fixtures?live=all");
+    liveFeed = liveData.response || [];
+  } catch (err) {
+    if (err.isRateLimit) throw err;
+    console.warn("Worker-Sync Warning: Failed to fetch live feed (live=all), continuing with main list:", err.message);
+    metaResult.warnings.push(`live_feed_unavailable: ${err.message}`);
+  }
+  
+  const activeLiveFeed = liveFeed.filter(f => f.league?.id === parseInt(leagueId) && f.league?.season === parseInt(season));
+  const activeLiveFeedMap = new Map(activeLiveFeed.map(f => [f.fixture.id, f]));
+  
+  const liveFixtureIds = new Set();
+  const finishedFixtures = [];
+  
+  // 3. جلب الترتيب (إعادة استخدام من الكاش أو جلب جديد متباعد)
+  let normalizedStandings = null;
   let standingRowsCount = 0;
-  if (rawStandings.length > 0) {
-    const leagueInfo = rawStandings[0].league;
-    normalizedStandings.leagueName = leagueInfo.name;
-    
-    if (Array.isArray(leagueInfo.standings)) {
-      for (const group of leagueInfo.standings) {
-        if (Array.isArray(group) && group.length > 0) {
-          const groupName = group[0].group || "Group Stage";
-          const rows = group.map(row => {
-            standingRowsCount++;
-            return {
-              rank: row.rank,
-              teamId: row.team?.id || null,
-              teamName: row.team?.name || null,
-              teamLogo: row.team?.logo || null,
-              points: row.points,
-              goalsDiff: row.goalsDiff,
-              group: row.group || null,
-              form: row.form || null,
-              status: row.status || null,
-              description: row.description || null,
-              allPlayed: row.all?.played ?? 0,
-              allWin: row.all?.win ?? 0,
-              allDraw: row.all?.draw ?? 0,
-              allLose: row.all?.lose ?? 0,
-              goalsFor: row.all?.goals?.for ?? 0,
-              goalsAgainst: row.all?.goals?.against ?? 0
-            };
-          });
-          normalizedStandings.groups.push({
-            name: groupName,
-            standings: rows
-          });
+  
+  if (reuseStatic && existingSnapshot && existingSnapshot.standings && Array.isArray(existingSnapshot.standings.groups) && existingSnapshot.standings.groups.length > 0) {
+    console.log("Worker-Sync: Reusing static standings from KV cache.");
+    normalizedStandings = existingSnapshot.standings;
+    normalizedStandings.groups.forEach(g => {
+      standingRowsCount += g.standings.length;
+    });
+    metaResult.warnings.push("standings_reused_from_cache");
+  } else {
+    try {
+      await delay(delayMs);
+      console.log("Worker-Sync: Fetching standings...");
+      const standingsData = await fetchFromApi(`/standings?league=${leagueId}&season=${season}`);
+      const rawStandings = standingsData.response || [];
+      
+      normalizedStandings = {
+        leagueId: parseInt(leagueId),
+        leagueName: "FIFA World Cup",
+        season: parseInt(season),
+        groups: []
+      };
+      
+      if (rawStandings.length > 0) {
+        const leagueInfo = rawStandings[0].league;
+        normalizedStandings.leagueName = leagueInfo.name;
+        
+        if (Array.isArray(leagueInfo.standings)) {
+          for (const group of leagueInfo.standings) {
+            if (Array.isArray(group) && group.length > 0) {
+              const groupName = group[0].group || "Group Stage";
+              const rows = group.map(row => {
+                standingRowsCount++;
+                return {
+                  rank: row.rank,
+                  teamId: row.team?.id || null,
+                  teamName: row.team?.name || null,
+                  teamLogo: row.team?.logo || null,
+                  points: row.points,
+                  goalsDiff: row.goalsDiff,
+                  group: row.group || null,
+                  form: row.form || null,
+                  status: row.status || null,
+                  description: row.description || null,
+                  allPlayed: row.all?.played ?? 0,
+                  allWin: row.all?.win ?? 0,
+                  allDraw: row.all?.draw ?? 0,
+                  allLose: row.all?.lose ?? 0,
+                  goalsFor: row.all?.goals?.for ?? 0,
+                  goalsAgainst: row.all?.goals?.against ?? 0
+                };
+              });
+              normalizedStandings.groups.push({
+                name: groupName,
+                standings: rows
+              });
+            }
+          }
         }
+      }
+    } catch (err) {
+      if (err.isRateLimit) {
+        console.warn("Worker-Sync: Standings fetch rate limited. Continuing in partial mode.");
+        metaResult.partial = true;
+        metaResult.warnings.push("standings_unavailable_rate_limit");
+      } else {
+        console.error("Worker-Sync: Standings fetch failed:", err.message);
+        metaResult.partial = true;
+        metaResult.warnings.push(`standings_unavailable: ${err.message}`);
+      }
+      
+      // الرجوع للمخزون القديم كبديل
+      if (existingSnapshot && existingSnapshot.standings) {
+        normalizedStandings = existingSnapshot.standings;
+        normalizedStandings.groups.forEach(g => { standingRowsCount += g.standings.length; });
+        metaResult.warnings.push("fallback_standings_used");
+      } else {
+        normalizedStandings = {
+          leagueId: parseInt(leagueId),
+          leagueName: "FIFA World Cup",
+          season: parseInt(season),
+          groups: []
+        };
       }
     }
   }
@@ -189,33 +289,109 @@ async function performSync(env) {
     }
   }
   
-  // 3. جلب جميع المباريات
-  console.log("Worker-Sync: Fetching all fixtures...");
-  const fixturesData = await fetchFromApi(`/fixtures?league=${leagueId}&season=${season}`);
-  const rawFixtures = fixturesData.response || [];
+  // 4. جلب الفرق المشاركة (إعادة استخدام من الكاش، جلب جديد متباعد، أو اشتقاق مؤقت)
+  let normalizedTeams = [];
+  let teamsFetched = false;
   
-  // 4. جلب التحديث المباشر للمباريات النشطة
-  console.log("Worker-Sync: Fetching live fixtures feed...");
-  let liveFeed = [];
-  try {
-    const liveData = await fetchFromApi("/fixtures?live=all");
-    liveFeed = liveData.response || [];
-  } catch (err) {
-    console.warn("Worker-Sync Warning: Failed to fetch live feed (live=all):", err.message);
+  if (reuseStatic && existingSnapshot && existingSnapshot.teams && Array.isArray(existingSnapshot.teams) && existingSnapshot.teams.length > 0) {
+    console.log("Worker-Sync: Reusing static teams from KV cache.");
+    normalizedTeams = existingSnapshot.teams;
+    teamsFetched = true;
+    metaResult.warnings.push("teams_reused_from_cache");
+  } else {
+    try {
+      await delay(delayMs);
+      console.log("Worker-Sync: Fetching teams...");
+      const teamsData = await fetchFromApi(`/teams?league=${leagueId}&season=${season}`);
+      const rawTeams = teamsData.response || [];
+      
+      normalizedTeams = rawTeams.map(t => {
+        const team = t.team;
+        const venue = t.venue;
+        if (team) {
+          return {
+            id: team.id,
+            name: team.name,
+            code: team.code || null,
+            country: team.country || null,
+            national: team.national ?? null,
+            logo: team.logo || null,
+            venueName: venue?.name || null
+          };
+        }
+        return null;
+      }).filter(Boolean);
+      teamsFetched = true;
+    } catch (err) {
+      if (err.isRateLimit) {
+        console.warn("Worker-Sync: Teams fetch rate limited. Deriving from fixtures.");
+        metaResult.partial = true;
+        metaResult.warnings.push("teams_unavailable_rate_limit");
+      } else {
+        console.error("Worker-Sync: Teams fetch failed:", err.message);
+        metaResult.partial = true;
+        metaResult.warnings.push(`teams_unavailable: ${err.message}`);
+      }
+      
+      // الرجوع للمخزون القديم كبديل
+      if (existingSnapshot && existingSnapshot.teams && existingSnapshot.teams.length > 0) {
+        normalizedTeams = existingSnapshot.teams;
+        teamsFetched = true;
+        metaResult.warnings.push("fallback_teams_used");
+      }
+    }
   }
   
-  const activeLiveFeed = liveFeed.filter(f => f.league?.id === parseInt(leagueId) && f.league?.season === parseInt(season));
-  const activeLiveFeedMap = new Map(activeLiveFeed.map(f => [f.fixture.id, f]));
+  const teamCodeMap = new Map();
+  const teamLogoMap = new Map();
   
-  const liveFixtureIds = new Set();
-  const finishedFixtures = [];
+  if (teamsFetched) {
+    normalizedTeams.forEach(t => {
+      teamCodeMap.set(t.id, t.code);
+      teamLogoMap.set(t.id, t.logo);
+    });
+  } else {
+    // اشتقاق بيانات الفرق بشكل مؤقت من المباريات لتفادي انهيار العرض
+    const derivedTeamsMap = new Map();
+    rawFixtures.forEach(f => {
+      if (f.teams?.home?.id) {
+        derivedTeamsMap.set(f.teams.home.id, {
+          id: f.teams.home.id,
+          name: f.teams.home.name,
+          code: f.teams.home.code || null,
+          logo: f.teams.home.logo || null,
+          country: null,
+          national: true,
+          venueName: null
+        });
+      }
+      if (f.teams?.away?.id) {
+        derivedTeamsMap.set(f.teams.away.id, {
+          id: f.teams.away.id,
+          name: f.teams.away.name,
+          code: f.teams.away.code || null,
+          logo: f.teams.away.logo || null,
+          country: null,
+          national: true,
+          venueName: null
+        });
+      }
+    });
+    
+    normalizedTeams = Array.from(derivedTeamsMap.values());
+    normalizedTeams.forEach(t => {
+      teamCodeMap.set(t.id, t.code);
+      teamLogoMap.set(t.id, t.logo);
+    });
+    metaResult.warnings.push("teams_derived_from_fixtures");
+  }
   
+  // تطبيع وتجهيز المباريات
   const normalizedMatches = rawFixtures.map(f => {
     const fix = f.fixture;
     const teams = f.teams;
     const goals = f.goals;
     const score = f.score;
-    
     if (!fix) return null;
     
     let currentFix = fix;
@@ -223,7 +399,6 @@ async function performSync(env) {
     let currentGoals = goals;
     let currentScore = score;
     
-    // إذا كانت المباراة مباشرة، نستخدم تحديثاتها من التغذية النشطة
     if (activeLiveFeedMap.has(fix.id)) {
       const liveUpdate = activeLiveFeedMap.get(fix.id);
       currentFix = liveUpdate.fixture;
@@ -329,14 +504,9 @@ async function performSync(env) {
     };
   }).filter(Boolean);
   
-  // 5. جلب أحداث المباريات للنشطة ولآخر 3 منتهية
-  const latestFinished = finishedFixtures
-    .sort((a, b) => b.timestamp - a.timestamp)
-    .slice(0, 3)
-    .map(f => f.id);
-  const eventFixtureIds = new Set([...liveFixtureIds, ...latestFinished]);
-  
-  console.log(`Worker-Sync: Live fixtures: ${liveFixtureIds.size}. Fetching events for: ${eventFixtureIds.size} total.`);
+  // 5. جلب أحداث المباريات (للمباريات النشطة المباشرة فقط، ومحددة بحد أقصى مباراتين لتفادي قيود الدقيقة)
+  const liveFixtureIdsList = Array.from(liveFixtureIds).slice(0, 2);
+  console.log(`Worker-Sync: Live matches: ${liveFixtureIds.size}. Fetching events for capped: ${liveFixtureIdsList.length} total.`);
   
   const eventsResult = {
     updatedAt: new Date().toISOString(),
@@ -344,11 +514,13 @@ async function performSync(env) {
     fixtures: {}
   };
   
-  for (const fid of eventFixtureIds) {
-    console.log(`Worker-Sync: Fetching events for fixture ${fid}...`);
+  for (const fid of liveFixtureIdsList) {
     try {
+      await delay(delayMs);
+      console.log(`Worker-Sync: Fetching events for live fixture ${fid}...`);
       const eventsData = await fetchFromApi(`/fixtures/events?fixture=${fid}`);
       const rawEvents = eventsData.response || [];
+      
       eventsResult.fixtures[fid] = rawEvents.map(e => ({
         elapsed: e.time?.elapsed ?? null,
         extra: e.time?.extra ?? null,
@@ -363,28 +535,20 @@ async function performSync(env) {
         comments: e.comments || null
       }));
     } catch (err) {
-      console.error(`Worker-Sync: Failed to fetch events for fixture ${fid}:`, err.message);
+      console.error(`Worker-Sync: Failed to fetch events for live fixture ${fid}:`, err.message);
+      metaResult.warnings.push(err.isRateLimit ? `events_fixture_${fid}_rate_limited` : `events_fixture_${fid}_failed: ${err.message}`);
     }
   }
   
-  // 6. بناء البيانات الوصفية (Metadata)
-  const metaResult = {
-    updatedAt: new Date().toISOString(),
-    provider: "API-Football",
-    leagueId: parseInt(leagueId),
-    season: parseInt(season),
-    requestBudgetNote: "Sync queries 4 endpoints by default. Events queried only for live and latest 3 matches. Max 7 requests per sync run.",
-    generatedBy: "api-football-sync-worker",
-    groupNormalization: "standings-team-map",
-    counts: {
-      matches: normalizedMatches.length,
-      teams: normalizedTeams.length,
-      standingRows: standingRowsCount,
-      eventFixtures: Object.keys(eventsResult.fixtures).length,
-      liveMatches: liveFixtureIds.size
-    },
-    disclaimer: "Unofficial fan project. Data provided by API-Football/API-SPORTS. Not affiliated with FIFA."
+  // تجهيز إحصائيات meta
+  metaResult.counts = {
+    matches: normalizedMatches.length,
+    teams: normalizedTeams.length,
+    standingRows: standingRowsCount,
+    eventFixtures: Object.keys(eventsResult.fixtures).length,
+    liveMatches: liveFixtureIds.size
   };
+  metaResult.disclaimer = "Unofficial fan project. Data provided by API-Football/API-SPORTS. Not affiliated with FIFA.";
   
   return {
     meta: metaResult,
@@ -394,7 +558,7 @@ async function performSync(env) {
     events: eventsResult,
     updatedAt: new Date().toISOString(),
     source: "api-football",
-    version: "v1-m-b"
+    version: "v1-m-b-hotfix1"
   };
 }
 
@@ -589,7 +753,7 @@ async function getActiveSnapshot(env) {
     stale: isStale,
     source: fromFallback ? "cloudflare-worker-fallback" : "cloudflare-worker",
     updatedAt: snapshot.updatedAt,
-    reason: fromFallback ? "snapshot_not_available" : null
+    reason: fromFallback ? "snapshot_not_available" : (snapshot.meta && snapshot.meta.partial ? "partial_snapshot" : null)
   };
 }
 
@@ -646,6 +810,32 @@ export default {
           counts: snapshot.meta.counts
         }, 200, { stale: false, updatedAt: snapshot.updatedAt }, corsHeaders);
       } catch (err) {
+        // معالجة تجاوز معدل الطلبات وحفظ اللقطة السابقة إن وجدت
+        if (err.isRateLimit) {
+          console.warn("Manual sync rate-limited by API provider.");
+          let existingSnapshot = null;
+          try {
+            const raw = await env.ALMERKAZ_SNAPSHOT_KV.get("live:snapshot:v1");
+            if (raw) existingSnapshot = JSON.parse(raw);
+          } catch (e) {
+            console.error("Failed to load snapshot on rate-limit recovery:", e.message);
+          }
+          
+          const errorPayload = {
+            success: false,
+            error: "provider_rate_limited",
+            existingSnapshotPreserved: !!existingSnapshot,
+            ...(existingSnapshot ? { latestSnapshotUpdatedAt: existingSnapshot.updatedAt } : {})
+          };
+          
+          return jsonResponseWrapper(errorPayload, 429, {
+            stale: true,
+            source: "cloudflare-worker",
+            updatedAt: existingSnapshot ? existingSnapshot.updatedAt : null,
+            reason: "provider_rate_limited"
+          }, corsHeaders);
+        }
+        
         console.error("Manual sync execution failed:", err.message);
         return jsonResponseWrapper({ error: "Sync Failed", message: err.message }, 500, { stale: false }, corsHeaders);
       }
@@ -660,6 +850,9 @@ export default {
     switch (path) {
       case "/health": {
         let latestSnapshotUpdatedAt = null;
+        let latestSnapshotSource = null;
+        let latestSnapshotVersion = null;
+        let latestSnapshotPartial = false;
         let isSnapshotStale = true;
         
         if (env.ALMERKAZ_SNAPSHOT_KV) {
@@ -668,6 +861,10 @@ export default {
             if (raw) {
               const snapObj = JSON.parse(raw);
               latestSnapshotUpdatedAt = snapObj.updatedAt;
+              latestSnapshotSource = snapObj.source || null;
+              latestSnapshotVersion = snapObj.version || null;
+              latestSnapshotPartial = !!(snapObj.meta && snapObj.meta.partial);
+              
               const updatedAtMs = new Date(snapObj.updatedAt).getTime();
               const nowMs = Date.now();
               const elapsedSeconds = Math.floor((nowMs - updatedAtMs) / 1000);
@@ -686,12 +883,15 @@ export default {
         
         const healthData = {
           status: "healthy",
-          version: "1.1.0",
+          version: "1.2.0",
           now: new Date().toISOString(),
           hasApiKey: !!env.API_FOOTBALL_KEY,
           hasSnapshotKv: !!env.ALMERKAZ_SNAPSHOT_KV,
           hasSyncAdminToken: !!env.SYNC_ADMIN_TOKEN,
           latestSnapshotUpdatedAt: latestSnapshotUpdatedAt,
+          latestSnapshotSource: latestSnapshotSource,
+          latestSnapshotVersion: latestSnapshotVersion,
+          latestSnapshotPartial: latestSnapshotPartial,
           stale: isSnapshotStale
         };
         
@@ -748,7 +948,11 @@ export default {
           await env.ALMERKAZ_SNAPSHOT_KV.put("live:snapshot:v1", JSON.stringify(snapshot));
           console.log("Scheduled sync completed successfully. Snapshot updated in KV.");
         } catch (err) {
-          console.error("Scheduled sync execution failed:", err.message);
+          if (err.isRateLimit) {
+            console.warn("Scheduled sync execution failed: provider rate-limited.");
+          } else {
+            console.error("Scheduled sync execution failed:", err.message);
+          }
         }
       })()
     );

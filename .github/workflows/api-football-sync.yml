@@ -2,8 +2,9 @@ name: API-Football World Cup JSON Sync
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '2-59/5 * * * *'
+  # Scheduled live sync paused while Cloudflare Worker live engine is tested.
+  # schedule:
+  #   - cron: '2-59/5 * * * *'
 
 concurrency:
   group: api-football-worldcup-sync
